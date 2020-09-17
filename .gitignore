@@ -1,0 +1,14 @@
+#NPM
+node_modules
+package-lock.json
+
+#Firebase
+.firebase
+.firebaserc
+firebase.json
+
+#keys
+PROCESS_ENV.js
+
+#nodemailer
+nodemailer.config.js
