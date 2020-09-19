@@ -8,7 +8,10 @@ export default class WebContent extends Component{
   render() {
     return (
       <Aux>
-
+        <About />
+        <Projects />
+        <Resume />
+        <Contact />
       </Aux>
     );
   }
