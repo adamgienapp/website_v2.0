@@ -6,7 +6,7 @@ const Projects = (props) => {
 
   return (
     <section id="projects">
-
+      Projects
     </section>
   );
 }

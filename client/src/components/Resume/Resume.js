@@ -6,7 +6,7 @@ const Resume = (props) => {
 
   return (
     <section id="resume">
-
+      Resume
     </section>
   );
 }

@@ -6,7 +6,7 @@ const About = (props) => {
 
   return (
     <section id="about">
-
+      About
     </section>
   );
 }
