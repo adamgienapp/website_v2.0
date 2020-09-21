@@ -1,11 +1,12 @@
 // Packages
 import React from 'react';
-
+// Components
+import classes from './Header.css';
 
 const Header = (props) => {
 
   return (
-    <div>
+    <div className={classes.Title}>
       Header
     </div>
   );
