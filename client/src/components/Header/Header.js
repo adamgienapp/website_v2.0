@@ -5,6 +5,13 @@ import classes from './Header.css';
 import useWindowDimensions from '../../hooks/UseWindowDimensions';
 
 
+const scroller = () => {
+  const element = document.getElementById("about");
+  element.scrollIntoView({
+    behavior: 'smooth',
+  });
+}
+
 const Header = (props) => {
   const { height, width } = useWindowDimensions();
 
@@ -18,7 +25,7 @@ const Header = (props) => {
       style={{
         backgroundImage: `url(/assets/img/bg${imgNum}.jpg)`,
         backgroundSize: 'cover',
-        backgroundPosition: '50% 20%',
+        backgroundPosition: '50%',
         backgroundAttachment: 'fixed',
       }}>
       <div className={classes.Title}>
@@ -27,7 +34,7 @@ const Header = (props) => {
           <em>Full Stack Software Engineer</em>
         </div>
       </div>
-      <div className={classes.ArrowContainer}>
+      <div className={classes.ArrowContainer} onClick={scroller}>
         <i className={`fa fa-angle-down ${classes.Arrow}`} aria-hidden="true"></i>
       </div>
     </div>
