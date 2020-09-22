@@ -6,11 +6,11 @@ import classes from './About.css';
 const About = (props) => {
 
   return (
-    <section id="about">
+    <section id="about" className="container">
       <div className={classes.Maintenance}>
-          Currently under maintenance.
-          <br/><br/>
-          Check back soon!
+        Currently under maintenance.
+        <br/><br/>
+        Check back soon!
       </div>
     </section>
   );

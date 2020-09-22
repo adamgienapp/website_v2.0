@@ -24,9 +24,6 @@ const Header = (props) => {
     <div className={classes.Header}
       style={{
         backgroundImage: `url(/assets/img/bg${imgNum}.jpg)`,
-        backgroundSize: 'cover',
-        backgroundPosition: '50%',
-        backgroundAttachment: 'fixed',
       }}>
       <div className={classes.Title}>
         Adam Gienapp
