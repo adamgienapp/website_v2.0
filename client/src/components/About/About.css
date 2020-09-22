@@ -1,5 +1,19 @@
 .About {
-  
+  min-height: 100vh;
+}
+
+.PicWindow {
+  height: 250px;
+  width: 200px;
+  border-radius: 35px;
+  background-size: 250px auto;
+  background-position-x: 70%;
+  background-position-y: 10%;
+  margin: 0 auto 0 auto;
+}
+
+.AboutBlurb {
+  margin-block-start: 2em;
 }
 
 

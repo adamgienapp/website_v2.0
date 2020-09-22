@@ -79,34 +79,42 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 92%;
+  max-width: 666px;
   margin: 0 auto;
+}
+
+.section-title {
+  padding: 20px 0 30px 0;
+  font-size: 2.0rem;
+  font-weight: 400;
+  text-align: center;
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .container {
-    width: 540px;
+    width: 80%
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .container {
     width: 720px;
   }
-}
+} */
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   .container {
     width: 960px;
   }
-}
+} */
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .container {
     width: 1140px;
   }
-}
+} */

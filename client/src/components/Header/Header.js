@@ -22,14 +22,14 @@ const Header = (props) => {
   }
 
   smoothscroll.polyfill();
-  
+
   return (
     <div className={classes.Header}
       style={{
         backgroundImage: `url(/assets/img/bg${imgNum}.jpg)`,
       }}>
       <div className={classes.Title}>
-        Adam Gienapp
+        <div className={classes.SlideInRight}>Adam Gienapp</div>
         <div className={classes.Subtitle}>
           <em>Full Stack Software Engineer</em>
         </div>

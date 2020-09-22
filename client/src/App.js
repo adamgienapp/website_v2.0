@@ -6,6 +6,14 @@ import Aux from './hoc/Aux/Aux';
 import Cockpit from './components/Cockpit/Cockpit';
 
 export default class App extends Component{
+  componentDidMount() {
+    const imgURLs = ["https://i.imgur.com/Sc7qASD.gif", "/assets/img/sdc_1.svg", "/assets/img/sdc_2.svg", "/assets/img/sdc_3.svg", "/assets/img/scratchtrack_demo.gif", "/assets/img/DK53A3i4.jpeg"];
+    imgURLs.forEach((url) => {
+      const img = new Image();
+      img.src = url;
+    });
+  }
+
   render() {
     return(
       <Aux>

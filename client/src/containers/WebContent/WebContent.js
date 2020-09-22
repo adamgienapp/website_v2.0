@@ -57,13 +57,13 @@ export default class WebContent extends Component{
           </FadeIn>
         </div>
         :
-      <FadeIn>
-        <Header />
-        <About />
-        <Projects />
-        <Resume />
-        <Contact />
-      </FadeIn>
+        <Aux>
+          <Header />
+          <About />
+          <Projects />
+          <Resume />
+          <Contact />
+        </Aux>
       }
       </Aux>
     );
