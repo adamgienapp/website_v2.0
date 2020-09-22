@@ -1,5 +1,6 @@
 // Packages
 import React from 'react';
+import smoothscroll from 'smoothscroll-polyfill';
 // Components
 import classes from './Header.css';
 import useWindowDimensions from '../../hooks/UseWindowDimensions';
@@ -20,6 +21,8 @@ const Header = (props) => {
     imgNum = 2;
   }
 
+  smoothscroll.polyfill();
+  
   return (
     <div className={classes.Header}
       style={{
@@ -31,8 +34,8 @@ const Header = (props) => {
           <em>Full Stack Software Engineer</em>
         </div>
       </div>
-      <div className={classes.ArrowContainer} onClick={scroller}>
-        <i className={`fa fa-angle-down ${classes.Arrow}`} aria-hidden="true"></i>
+      <div className={classes.ArrowContainer}>
+        <i className={`fa fa-angle-down ${classes.Arrow}`} aria-hidden="true" onClick={scroller}></i>
       </div>
     </div>
   );
