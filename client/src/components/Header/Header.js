@@ -19,6 +19,7 @@ const Header = (props) => {
         backgroundImage: `url(/assets/img/bg${imgNum}.jpg)`,
         backgroundSize: 'cover',
         backgroundPosition: '50% 20%',
+        backgroundAttachment: 'fixed',
       }}>
       <div className={classes.Title}>
         Adam Gienapp
