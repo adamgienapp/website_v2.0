@@ -31,79 +31,84 @@
     <script type="module" src="bundle.js"></script>
     <script>
       window.onscroll = () => {
-        const vh = window.innerHeight;
-        const navElement = document.getElementById('navbar');
-        const logoElement = document.getElementById('logo');
-        const aboutElement = document.getElementById('About');
-        const projectsElement = document.getElementById('Projects');
-        const resumeElement = document.getElementById('Resume');
-        const contactElement = document.getElementById('Contact');
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        const nav = document.getElementById('navbar');
+        const logo = document.getElementById('logo');
+        const aboutBtn = document.getElementById('About');
+        const projectsBtn = document.getElementById('Projects');
+        const resumeBtn = document.getElementById('Resume');
+        const contactBtn = document.getElementById('Contact');
+
+        const aboutSection = document.getElementById('about');
+        const projectsSection = document.getElementById('projects');
+        const resumeSection = document.getElementById('resume');
+        const contactSection = document.getElementById('contact');
         
         if (window.scrollY < vh * .10) {
-          if (navElement.classList.contains('bg-navy')) {
-            navElement.classList.remove('bg-navy');
+          if (nav.classList.contains('bg-navy')) {
+            nav.classList.remove('bg-navy');
           }
         } else {
-          if (!navElement.classList.contains('bg-navy')) {
-            navElement.classList.add('bg-navy');
+          if (!nav.classList.contains('bg-navy')) {
+            nav.classList.add('bg-navy');
           }
         }
 
         if (window.scrollY < vh * .30) {
-          if (!logoElement.classList.contains('hide')) {
-            logoElement.classList.add('hide');
+          if (!logo.classList.contains('hide')) {
+            logo.classList.add('hide');
           }
         } else {
-          if (logoElement.classList.contains('hide')) {
-            logoElement.classList.remove('hide');
+          if (logo.classList.contains('hide')) {
+            logo.classList.remove('hide');
           }
         }
 
-        if (window.scrollY < vh - 50 || window.scrollY >= 2 * vh - 50) {
-          if (aboutElement.classList.contains('active')) {
-            aboutElement.classList.remove('active');
-            aboutElement.classList.add('inactive');
+        if (window.scrollY < aboutSection.offsetTop - 50 || window.scrollY >= projectsSection.offsetTop - 50) {
+          if (aboutBtn.classList.contains('active')) {
+            aboutBtn.classList.remove('active');
+            aboutBtn.classList.add('inactive');
           }
         } else {
-          if (!aboutElement.classList.contains('active')) {
-            aboutElement.classList.add('active');
-            aboutElement.classList.remove('inactive');
+          if (!aboutBtn.classList.contains('active')) {
+            aboutBtn.classList.add('active');
+            aboutBtn.classList.remove('inactive');
           }
         }
 
-        if (window.scrollY < 2 * vh - 50 || window.scrollY >= 3 * vh - 50) {
-          if (projectsElement.classList.contains('active')) {
-            projectsElement.classList.remove('active');
-            projectsElement.classList.add('inactive');
+        if (window.scrollY < projectsSection.offsetTop - 50 || window.scrollY >= resumeSection.offsetTop - 50) {
+          if (projectsBtn.classList.contains('active')) {
+            projectsBtn.classList.remove('active');
+            projectsBtn.classList.add('inactive');
           }
         } else {
-          if (!projectsElement.classList.contains('active')) {
-            projectsElement.classList.add('active');
-            projectsElement.classList.remove('inactive');
+          if (!projectsBtn.classList.contains('active')) {
+            projectsBtn.classList.add('active');
+            projectsBtn.classList.remove('inactive');
           }
         }
 
-        if (window.scrollY < 3 * vh - 50 || window.scrollY >= 3.5 * vh - 50) {
-          if (resumeElement.classList.contains('active')) {
-            resumeElement.classList.remove('active');
-            resumeElement.classList.add('inactive');
+        if (window.scrollY < resumeSection.offsetTop - 50 || window.scrollY >= contactSection.offsetTop - 50) {
+          if (resumeBtn.classList.contains('active')) {
+            resumeBtn.classList.remove('active');
+            resumeBtn.classList.add('inactive');
           }
         } else {
-          if (!resumeElement.classList.contains('active')) {
-            resumeElement.classList.add('active');
-            resumeElement.classList.remove('inactive');
+          if (!resumeBtn.classList.contains('active')) {
+            resumeBtn.classList.add('active');
+            resumeBtn.classList.remove('inactive');
           }
         }
 
-        if (window.scrollY < 3.5 * vh - 50) {
-          if (contactElement.classList.contains('active')) {
-            contactElement.classList.remove('active');
-            contactElement.classList.add('inactive');
+        if (window.scrollY < contactSection.offsetTop - 50) {
+          if (contactBtn.classList.contains('active')) {
+            contactBtn.classList.remove('active');
+            contactBtn.classList.add('inactive');
           }
         } else {
-          if (!contactElement.classList.contains('active')) {
-            contactElement.classList.add('active');
-            contactElement.classList.remove('inactive');
+          if (!contactBtn.classList.contains('active')) {
+            contactBtn.classList.add('active');
+            contactBtn.classList.remove('inactive');
           }
         }
       }

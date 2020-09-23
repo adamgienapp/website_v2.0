@@ -8,7 +8,9 @@ import NavBtn from '../NavBtn/NavBtn';
 
 const scroller = (anchor) => {
   const element = document.getElementById(anchor);
-  element.scrollIntoView({
+  const y = element.getBoundingClientRect().top + window.pageYOffset - 50;
+  window.scrollTo({
+    top: y,
     behavior: 'smooth',
   });
 }
