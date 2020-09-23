@@ -30,12 +30,16 @@
     <!-- App module -->
     <script type="module" src="bundle.js"></script>
     <script>
-      document.getElementsByTagName('body')[0].onscroll = () => {
-        const { y, height } = document.body.getBoundingClientRect();
+      window.onscroll = () => {
+        const vh = window.innerHeight;
         const navElement = document.getElementById('navbar');
         const logoElement = document.getElementById('logo');
+        const aboutElement = document.getElementById('About');
+        const projectsElement = document.getElementById('Projects');
+        const resumeElement = document.getElementById('Resume');
+        const contactElement = document.getElementById('Contact');
         
-        if (y > -(height * .05)) {
+        if (window.scrollY < vh * .10) {
           if (navElement.classList.contains('bg-navy')) {
             navElement.classList.remove('bg-navy');
           }
@@ -45,13 +49,61 @@
           }
         }
 
-        if (y > -(height * .2)) {
+        if (window.scrollY < vh * .30) {
           if (!logoElement.classList.contains('hide')) {
             logoElement.classList.add('hide');
           }
         } else {
           if (logoElement.classList.contains('hide')) {
             logoElement.classList.remove('hide');
+          }
+        }
+
+        if (window.scrollY < vh - 50 || window.scrollY >= 2 * vh - 50) {
+          if (aboutElement.classList.contains('active')) {
+            aboutElement.classList.remove('active');
+            aboutElement.classList.add('inactive');
+          }
+        } else {
+          if (!aboutElement.classList.contains('active')) {
+            aboutElement.classList.add('active');
+            aboutElement.classList.remove('inactive');
+          }
+        }
+
+        if (window.scrollY < 2 * vh - 50 || window.scrollY >= 3 * vh - 50) {
+          if (projectsElement.classList.contains('active')) {
+            projectsElement.classList.remove('active');
+            projectsElement.classList.add('inactive');
+          }
+        } else {
+          if (!projectsElement.classList.contains('active')) {
+            projectsElement.classList.add('active');
+            projectsElement.classList.remove('inactive');
+          }
+        }
+
+        if (window.scrollY < 3 * vh - 50 || window.scrollY >= 3.5 * vh - 50) {
+          if (resumeElement.classList.contains('active')) {
+            resumeElement.classList.remove('active');
+            resumeElement.classList.add('inactive');
+          }
+        } else {
+          if (!resumeElement.classList.contains('active')) {
+            resumeElement.classList.add('active');
+            resumeElement.classList.remove('inactive');
+          }
+        }
+
+        if (window.scrollY < 3.5 * vh - 50) {
+          if (contactElement.classList.contains('active')) {
+            contactElement.classList.remove('active');
+            contactElement.classList.add('inactive');
+          }
+        } else {
+          if (!contactElement.classList.contains('active')) {
+            contactElement.classList.add('active');
+            contactElement.classList.remove('inactive');
           }
         }
       }

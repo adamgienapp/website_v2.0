@@ -22,10 +22,10 @@ const Toolbar = (props) => {
         Adam Gienapp
       </div>
       <ul className={classes.NavLinks}>
-        <NavBtn anchor="about" name="About" active={false} clicked={scroller} />
-        <NavBtn anchor="projects" name="Projects" active={false} clicked={scroller} />
-        <NavBtn anchor="resume" name="Resume" active={false} clicked={scroller} />
-        <NavBtn anchor="contact" name="Contact" active={false} clicked={scroller} />
+        <NavBtn name="About" clicked={() => scroller('about')} />
+        <NavBtn name="Projects" clicked={() => scroller('projects')} />
+        <NavBtn name="Resume" clicked={() => scroller('resume')} />
+        <NavBtn name="Contact" clicked={() => scroller('contact')} />
       </ul>
     </nav>
   );
