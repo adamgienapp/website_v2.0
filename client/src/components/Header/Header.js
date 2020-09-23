@@ -24,7 +24,7 @@ const Header = (props) => {
   smoothscroll.polyfill();
 
   return (
-    <div className={classes.Header}
+    <section id="top" className={classes.Header}
       style={{
         backgroundImage: `url(/assets/img/bg${imgNum}.jpg)`,
       }}>
@@ -37,7 +37,7 @@ const Header = (props) => {
       <div className={classes.ArrowContainer}>
         <i className={`fa fa-angle-down ${classes.Arrow}`} aria-hidden="true" onClick={scroller}></i>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -14,7 +14,7 @@
     <link type="text/css" rel="stylesheet" href="normalize.css">
     <link type="text/css" rel="stylesheet" href="style.css">
   </head>
-  <body data-spy="scroll" data-target=".navbar" data-offset="10">
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
     <!-- Main content, changes on route -->
     <div id="root"></div>
 
@@ -29,5 +29,32 @@
 
     <!-- App module -->
     <script type="module" src="bundle.js"></script>
+    <script>
+      document.getElementsByTagName('body')[0].onscroll = () => {
+        const { y, height } = document.body.getBoundingClientRect();
+        const navElement = document.getElementById('navbar');
+        const logoElement = document.getElementById('logo');
+        
+        if (y > -(height * .05)) {
+          if (navElement.classList.contains('bg-navy')) {
+            navElement.classList.remove('bg-navy');
+          }
+        } else {
+          if (!navElement.classList.contains('bg-navy')) {
+            navElement.classList.add('bg-navy');
+          }
+        }
+
+        if (y > -(height * .2)) {
+          if (!logoElement.classList.contains('hide')) {
+            logoElement.classList.add('hide');
+          }
+        } else {
+          if (logoElement.classList.contains('hide')) {
+            logoElement.classList.remove('hide');
+          }
+        }
+      }
+    </script>
   </body>
 </html>
