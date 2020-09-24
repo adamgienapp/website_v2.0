@@ -17,7 +17,7 @@ const Resume = (props) => {
             <li className={classes.ListItem}>Education:
               <ul>
                 <li className={classes.ListItem}>Hack Reactor - Advanced Software Engineering Immersive | March 2020</li>
-                <li className={classes.ListItem}>University of Michigan, Ann Arbor - B.S.E in Mechanical Engineering | April 2009</li>
+                <li className={classes.ListItem}>University of Michigan, Ann Arbor - B.S. in Mechanical Engineering | April 2009</li>
               </ul>  
             </li>
           </ul>

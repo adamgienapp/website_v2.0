@@ -4,7 +4,7 @@
 
 .ContentWrap {
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
 }
 
 .PicWindow {

@@ -10,7 +10,7 @@ const About = (props) => {
       <div className="container">
         <div className="section-title">About Me</div>
         <div className={classes.ContentWrap}>
-          <div 
+          <div
             className={classes.PicWindow}
             style={{
               backgroundImage: 'url(/assets/img/DK53A3i4.jpeg)'
