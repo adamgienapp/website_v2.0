@@ -7,7 +7,9 @@ const Contact = (props) => {
 
   return (
     <section id="contact" className={classes.Contact}>
-
+      <div className="container">
+        <div className="section-title">Contact Me</div>
+      </div>
     </section>
   );
 }

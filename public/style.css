@@ -136,10 +136,10 @@ body {
 
 #navbar,
 #logo,
-#about,
-#projects,
-#resume,
-#contact {
+#About,
+#Projects,
+#Resume,
+#Contact {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;

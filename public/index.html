@@ -8,7 +8,7 @@
     <meta name="author" content="Adam Gienapp">
 
     <title>Adam Gienapp Dot Com</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:ital,wght@0,200;0,400;1,200;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,700&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="normalize.css">
@@ -43,6 +43,8 @@
         const projectsSection = document.getElementById('projects');
         const resumeSection = document.getElementById('resume');
         const contactSection = document.getElementById('contact');
+
+        const yOffset = 75;
         
         if (window.scrollY < vh * .10) {
           if (nav.classList.contains('bg-navy')) {
@@ -64,7 +66,7 @@
           }
         }
 
-        if (window.scrollY < aboutSection.offsetTop - 50 || window.scrollY >= projectsSection.offsetTop - 50) {
+        if (window.scrollY < aboutSection.offsetTop - yOffset || window.scrollY >= projectsSection.offsetTop - yOffset) {
           if (aboutBtn.classList.contains('active')) {
             aboutBtn.classList.remove('active');
             aboutBtn.classList.add('inactive');
@@ -76,7 +78,7 @@
           }
         }
 
-        if (window.scrollY < projectsSection.offsetTop - 50 || window.scrollY >= resumeSection.offsetTop - 50) {
+        if (window.scrollY < projectsSection.offsetTop - yOffset || window.scrollY >= resumeSection.offsetTop - yOffset) {
           if (projectsBtn.classList.contains('active')) {
             projectsBtn.classList.remove('active');
             projectsBtn.classList.add('inactive');
@@ -88,7 +90,7 @@
           }
         }
 
-        if (window.scrollY < resumeSection.offsetTop - 50 || window.scrollY >= contactSection.offsetTop - 50) {
+        if (window.scrollY < resumeSection.offsetTop - yOffset || window.scrollY >= contactSection.offsetTop - yOffset) {
           if (resumeBtn.classList.contains('active')) {
             resumeBtn.classList.remove('active');
             resumeBtn.classList.add('inactive');
@@ -100,7 +102,7 @@
           }
         }
 
-        if (window.scrollY < contactSection.offsetTop - 50) {
+        if (window.scrollY < contactSection.offsetTop - yOffset) {
           if (contactBtn.classList.contains('active')) {
             contactBtn.classList.remove('active');
             contactBtn.classList.add('inactive');

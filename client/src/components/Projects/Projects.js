@@ -7,7 +7,9 @@ const Projects = (props) => {
 
   return (
     <section id="projects" className={classes.Projects}>
-      
+      <div className="container">
+        <div className="section-title">Select Projects</div>
+      </div>
     </section>
   );
 }
