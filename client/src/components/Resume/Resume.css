@@ -3,7 +3,7 @@
 }
 
 .Size {
-  min-height: 50vh;
+  min-height: calc(50vh - 50px);
   display: flex;
   flex-flow: column;
   justify-content: space-between;
