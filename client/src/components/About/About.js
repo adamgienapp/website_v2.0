@@ -7,7 +7,7 @@ const About = (props) => {
 
   return (
     <section id="about" className={classes.About}>
-      <div className="container">
+      <div id="aboutContent" className={[classes.Size, classes.AboutHide, 'container', 'scroll-show'].join(' ')}>
         <div className="section-title">About Me</div>
         <div className={classes.ContentWrap}>
           <div

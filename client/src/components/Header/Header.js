@@ -8,7 +8,9 @@ import useWindowDimensions from '../../hooks/UseWindowDimensions';
 
 const scroller = () => {
   const element = document.getElementById("about");
-  element.scrollIntoView({
+  const y = element.getBoundingClientRect().top + window.pageYOffset - 50;
+  window.scrollTo({
+    top: y,
     behavior: 'smooth',
   });
 }

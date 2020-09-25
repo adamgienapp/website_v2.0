@@ -85,13 +85,6 @@ body {
   margin: 0 auto;
 }
 
-.section-title {
-  padding: 20px 0;
-  font-size: 2.0rem;
-  font-weight: 400;
-  text-align: center;
-}
-
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .container {
@@ -119,6 +112,17 @@ body {
     width: 1140px;
   }
 } */
+
+.section-title {
+  padding: 20px 0;
+  font-size: 2.0rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.scroll-show {
+  opacity: 0;
+}
 
 .hide {
   opacity: 0;

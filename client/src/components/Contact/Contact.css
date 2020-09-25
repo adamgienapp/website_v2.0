@@ -1,4 +1,111 @@
 .Contact {
-  min-height: 100vh;
-  background-color: lightslategray;
+  min-height: calc(100vh - 225px);
+  background-color: lightgrey;
+}
+
+.Size {
+  min-height: calc(100vh - 225px);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.ContactHide {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.MessageBtn {
+  display: inline-block;
+  box-sizing: border-box;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid #212529;
+  border-radius: 5px;
+  background-color: inherit;
+  color: #212529;
+  font-weight: 600;
+  text-align: center;
+  padding: 15px;
+  /* margin-top: 30px; */
+
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.MessageBtn:hover {
+  cursor: pointer;
+  background-color: #212529;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.SocialLinkContainer {
+  text-align: center;
+}
+
+.SocialLink {
+  font-size: 3.5rem;
+  /* line-height: 0.85em; */
+  color: #212529;
+  margin: 0 20px;
+
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.SocialLink:hover {
+  transform: scale(1.2);
+}
+
+.LiIcon:hover {
+  color: #0072b1;
+}
+
+.GhIcon:hover {
+  color: #211F1F;
+}
+
+.FbIcon:hover {
+  color: #4267b2;
+}
+
+.IgIcon:hover {
+  background: radial-gradient(circle at 30% 107%,
+    #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Footer {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+
+  height: 175px;
+  width: 100%;
+  background-color: #212529;
+  color: #fff;
+}
+
+.TextLink,
+.TextLink:visited {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.TextLink:hover {
+  color: inherit;
+  text-decoration: underline;
 }

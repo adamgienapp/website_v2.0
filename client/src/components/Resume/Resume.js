@@ -6,13 +6,13 @@ import classes from './Resume.css';
 const Resume = (props) => {
 
   return (
-    <div className="container">
-      <section id="resume" className={classes.Resume}>
+    <section id="resume" className={classes.Resume}>
+      <div id="resumeContent" className={[classes.Size, classes.ResumeHide, 'container', 'scroll-show'].join(' ')}>
         <div className="section-title">My Resume</div>
         <div className={classes.ResumeBlurb}>
           The quick version:
           <ul>
-            <li className={classes.ListItem}>An experienced engineer with a proven track record of developing innovative, impactful products from concept through production.</li>
+            <li className={classes.ListItem}>A seasoned engineer with a proven track record of developing innovative, impactful products from concept through production.</li>
             <li className={classes.ListItem}>Experience at start-ups, global corporations, and everything in between.</li>
             <li className={classes.ListItem}>Education:
               <ul>
@@ -29,8 +29,8 @@ const Resume = (props) => {
             </div>
           </a>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
 

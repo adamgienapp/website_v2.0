@@ -10,7 +10,7 @@
     <title>Adam Gienapp Dot Com</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,700&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/370c812d3e.js" crossorigin="anonymous"></script>
     <link type="text/css" rel="stylesheet" href="normalize.css">
     <link type="text/css" rel="stylesheet" href="style.css">
   </head>
@@ -44,6 +44,11 @@
         const resumeSection = document.getElementById('resume');
         const contactSection = document.getElementById('contact');
 
+        const aboutContent = document.getElementById("aboutContent");
+        const projectsContent = document.getElementById("projectsContent");
+        const resumeContent = document.getElementById("resumeContent");
+        const contactContent = document.getElementById("contactContent");
+
         const yOffset = 75;
         
         if (window.scrollY < vh * .10) {
@@ -66,6 +71,12 @@
           }
         }
 
+        if (window.scrollY > aboutSection.offsetTop - (vh * .5)) {
+          if (aboutContent.classList.contains('scroll-show')) {
+            aboutContent.classList.remove('scroll-show');
+          }
+        }
+
         if (window.scrollY < aboutSection.offsetTop - yOffset || window.scrollY >= projectsSection.offsetTop - yOffset) {
           if (aboutBtn.classList.contains('active')) {
             aboutBtn.classList.remove('active');
@@ -75,6 +86,12 @@
           if (!aboutBtn.classList.contains('active')) {
             aboutBtn.classList.add('active');
             aboutBtn.classList.remove('inactive');
+          }
+        }
+
+        if (window.scrollY > projectsSection.offsetTop - (vh * .5)) {
+          if (projectsContent.classList.contains('scroll-show')) {
+            projectsContent.classList.remove('scroll-show');
           }
         }
 
@@ -90,6 +107,12 @@
           }
         }
 
+        if (window.scrollY > resumeSection.offsetTop - (vh * .5)) {
+          if (resumeContent.classList.contains('scroll-show')) {
+            resumeContent.classList.remove('scroll-show');
+          }
+        }
+
         if (window.scrollY < resumeSection.offsetTop - yOffset || window.scrollY >= contactSection.offsetTop - yOffset) {
           if (resumeBtn.classList.contains('active')) {
             resumeBtn.classList.remove('active');
@@ -99,6 +122,12 @@
           if (!resumeBtn.classList.contains('active')) {
             resumeBtn.classList.add('active');
             resumeBtn.classList.remove('inactive');
+          }
+        }
+
+        if (window.scrollY > contactSection.offsetTop - (vh * .5)) {
+          if (contactContent.classList.contains('scroll-show')) {
+            contactContent.classList.remove('scroll-show');
           }
         }
 
