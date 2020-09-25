@@ -5,7 +5,6 @@ import classes from './Contact.css';
 import Aux from '../../hoc/Aux/Aux';
 
 const Contact = (props) => {
-  
   return (
     <Aux>
       <section id="contact" className={classes.Contact}>

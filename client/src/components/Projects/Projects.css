@@ -1,6 +1,6 @@
 .Projects {
-  min-height: 100vh;
-  background-color: lightslategrey
+  min-height: calc(100vh -50px);
+  background-color: lightslategrey;
 }
 
 .Size {
