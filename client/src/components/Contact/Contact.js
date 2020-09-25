@@ -25,7 +25,7 @@ const Contact = (props) => {
               <a href="http://github.com/adamgienapp" target="_blank">
                 <i className={[classes.SocialLink, classes.GhIcon, 'fa', 'fa-github-square'].join(' ')} aria-hidden="true"></i>
               </a>
-              <a href="http://instagram.com/podsixisjerks" target="_blank">
+              <a href="http://instagram.com/adam.gienapp" target="_blank">
                 <i className={[classes.SocialLink, classes.IgIcon, 'fab', 'fa-instagram-square'].join(' ')} aria-hidden="true"></i>
               </a>
               <a href="http://facebook.com/adam.gienapp" target="_blank">

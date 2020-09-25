@@ -4,7 +4,6 @@ import React from 'react';
 import classes from './About.css';
 
 const About = (props) => {
-
   return (
     <section id="about" className={classes.About}>
       <div id="aboutContent" className={[classes.Size, classes.AboutHide, 'container', 'scroll-show'].join(' ')}>

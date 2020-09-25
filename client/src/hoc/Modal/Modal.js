@@ -1,8 +1,10 @@
+// Packages
 import React, { Component } from 'react';
-
+// Component
 import classes from './Modal.css';
 import Aux from '../Aux/Aux';
 import Backdrop from '../../UI/Backdrop/Backdrop';
+
 
 export default class Modal extends Component {
 

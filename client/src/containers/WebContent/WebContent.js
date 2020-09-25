@@ -11,7 +11,6 @@ import Contact from '../../components/Contact/Contact';
 
 export default class WebContent extends Component{
   constructor(props) {
-    super(props);
     this.state = {
       img1Loaded: false,
       img2Loaded: false,
