@@ -30,7 +30,7 @@ export default class ContactFrom extends Component {
     document.getElementById('emailForm').checkValidity();
     if (document.getElementById('emailForm').reportValidity()) {
       let {name, email, subject, message} = this.state;
-      axios.post('/send', {name, email, subject, message})
+      axios.post('https://us-central1-portfolio-a7892.cloudfunctions.net/submitMessage', {name, email, subject, message})
         .then(() => {
           this.setState({
             name: '',
