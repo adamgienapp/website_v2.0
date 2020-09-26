@@ -12,12 +12,14 @@
 
 .Size {
   min-height: calc(100vh - 50px);
-}
-
-.ContentWrap {
   display: flex;
   flex-flow: column;
+  justify-content: space-between;
 }
+
+/* .ContentWrap {
+  
+} */
 
 .PicWindow {
   height: 250px;

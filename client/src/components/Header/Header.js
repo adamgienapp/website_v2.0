@@ -1,19 +1,10 @@
 // Packages
 import React from 'react';
-import smoothscroll from 'smoothscroll-polyfill';
 // Components
 import classes from './Header.css';
 import useWindowDimensions from '../../hooks/UseWindowDimensions';
+import Arrow from '../../UI/Arrow/Arrow';
 
-
-const scroller = () => {
-  const element = document.getElementById("about");
-  const y = element.getBoundingClientRect().top + window.pageYOffset - 50;
-  window.scrollTo({
-    top: y,
-    behavior: 'smooth',
-  });
-}
 
 const Header = (props) => {
   const { height, width } = useWindowDimensions();
@@ -22,8 +13,6 @@ const Header = (props) => {
   if (width / height < 0.9) {
     imgNum = 2;
   }
-
-  smoothscroll.polyfill();
 
   return (
     <section id="top" className={classes.Header}
@@ -37,7 +26,7 @@ const Header = (props) => {
         </div>
       </div>
       <div className={classes.ArrowContainer}>
-        <i className={`fa fa-angle-down ${classes.Arrow}`} aria-hidden="true" onClick={scroller}></i>
+        <Arrow target="about" color="#fff" />
       </div>
     </section>
   );

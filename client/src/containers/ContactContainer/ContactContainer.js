@@ -26,7 +26,7 @@ export default class ContactContainer extends Component {
     this.setState((prevState) => {
       return {
         shift: !prevState.shift,
-      }
+      };
     });
   }
 
@@ -50,16 +50,11 @@ export default class ContactContainer extends Component {
             message: '',
             notification: 'Message sent. Thanks for reaching out!',
             notificationStyle: { display: 'inline-block' }
-          }, () => setTimeout(() => {
-              this.setState({
-                notification: '',
-                notificationStyle: { display: 'none' }
-              })
-            }, 3000)
-          );
+          }, () => {
+            document.getElementById("emailForm").reset();
+          });
         })
         .catch((err) => console.error(err));
-      document.getElementById("emailForm").reset();
     }
   }
 
