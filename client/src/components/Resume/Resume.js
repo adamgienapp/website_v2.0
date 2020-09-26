@@ -2,6 +2,7 @@
 import React from 'react';
 // Components
 import classes from './Resume.css';
+import Button from '../../UI/Button/Button';
 
 const Resume = (props) => {
 
@@ -24,9 +25,9 @@ const Resume = (props) => {
         </div>
         <div style={{ textAlign: 'center', margin: '30px 0' }}>
           <a className={classes.ATagClear} href="/assets/adam-gienapp-resume.pdf" >
-            <div className={classes.DownloadBtn}>
+            <Button>
               Download a copy
-            </div>
+            </Button>
           </a>
         </div>
       </div>

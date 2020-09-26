@@ -7,10 +7,17 @@
 body {
   font-family: 'Raleway', 'Open Sans', sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 .btn-focus-off:focus {
   outline: none;
+}
+
+input, textarea {
+  box-sizing: border-box;
+  border: none;
+  font-size: larger;
 }
 
 .loader,

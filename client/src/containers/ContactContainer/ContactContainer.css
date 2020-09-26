@@ -1,13 +1,11 @@
-.Projects {
-  min-height: calc(100vh - 50px);
-  background-color: lightslategrey;
-}
+.ContactContainer {
+  min-height: calc(100vh - 225px);
+  width: 200vw;
+  background-color: lightgrey;
 
-.Size {
-  min-height: calc(100vh - 50px);
-}
+  display: flex;
+  flex-direction: row;
 
-.ProjectsHide {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;

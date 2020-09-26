@@ -1,10 +1,12 @@
 .Contact {
   min-height: calc(100vh - 225px);
+  width: 100vw;
   background-color: lightgrey;
 }
 
 .Size {
   min-height: calc(100vh - 225px);
+  width: 100vw;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -86,26 +88,4 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.Footer {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-around;
-
-  height: 175px;
-  width: 100%;
-  background-color: #212529;
-  color: #fff;
-}
-
-.TextLink,
-.TextLink:visited {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-.TextLink:hover {
-  color: inherit;
-  text-decoration: underline;
 }

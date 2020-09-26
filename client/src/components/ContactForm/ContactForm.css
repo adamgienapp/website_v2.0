@@ -1,0 +1,45 @@
+.ContactForm {
+  min-height: calc(100vh - 225px);
+  width: 100vw;
+  background-color: lightgrey;
+}
+
+.Size {
+  min-height: calc(100vh - 225px);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.FormBody {
+  min-height: 100%;
+  margin-bottom: 30px;
+}
+
+.ButtonContainer {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.FormRow {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.FormColL {
+  width: 100%;
+}
+
+.FormColM {
+  width: 90%;
+}
+
+.FormColS {
+  width: 20%;
+}
+
+.FormBox {
+  width: 100%;
+}

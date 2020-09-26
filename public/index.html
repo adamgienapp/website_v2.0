@@ -71,7 +71,7 @@
           }
         }
 
-        if (window.scrollY > aboutSection.offsetTop - (vh * .5)) {
+        if (window.scrollY > aboutSection.offsetTop - (vh * .5) - 50) {
           if (aboutContent.classList.contains('scroll-show')) {
             aboutContent.classList.remove('scroll-show');
           }
@@ -89,7 +89,7 @@
           }
         }
 
-        if (window.scrollY > projectsSection.offsetTop - (vh * .5)) {
+        if (window.scrollY > projectsSection.offsetTop - (vh * .5) - 50) {
           if (projectsContent.classList.contains('scroll-show')) {
             projectsContent.classList.remove('scroll-show');
           }
@@ -107,7 +107,7 @@
           }
         }
 
-        if (window.scrollY > resumeSection.offsetTop - (vh * .5)) {
+        if (window.scrollY > resumeSection.offsetTop - (vh * .5) - 50) {
           if (resumeContent.classList.contains('scroll-show')) {
             resumeContent.classList.remove('scroll-show');
           }
@@ -125,7 +125,7 @@
           }
         }
 
-        if (window.scrollY > contactSection.offsetTop - (vh * .5)) {
+        if (window.scrollY >= contactSection.offsetTop - (vh * .5) - 100) {
           if (contactContent.classList.contains('scroll-show')) {
             contactContent.classList.remove('scroll-show');
           }

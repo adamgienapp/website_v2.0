@@ -7,10 +7,12 @@ import Header from '../../components/Header/Header';
 import About from '../../components/About/About';
 import Projects from '../../components/Projects/Projects';
 import Resume from '../../components/Resume/Resume';
-import Contact from '../../components/Contact/Contact';
+import ContactContainer from '../ContactContainer/ContactContainer';
+import Footer from '../../components/Footer/Footer';
 
 export default class WebContent extends Component{
   constructor(props) {
+    super(props);
     this.state = {
       img1Loaded: false,
       img2Loaded: false,
@@ -61,7 +63,8 @@ export default class WebContent extends Component{
           <About />
           <Projects />
           <Resume />
-          <Contact />
+          <ContactContainer />
+          <Footer />
         </Aux>
       }
       </Aux>

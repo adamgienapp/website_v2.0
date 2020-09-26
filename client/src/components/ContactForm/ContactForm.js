@@ -1,90 +1,47 @@
 // Packages
-import React, { Component } from 'react';
+import React from 'react';
 // Components
 import classes from './ContactForm.css';
+import Button from '../../UI/Button/Button';
 
 
-export default class ContactFrom extends Component {
-  constructor(props) {
-    this.state = {
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-      notification: '',
-      notificationStyle: { display: 'none' }
-    };
-
-    this.changeHandler = this.changeHandler.bind(this);
-    this.submitHandler = this.submitHandler.bind(this);
-  }
-
-  changeHandler(e) {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
-  }
-
-  submitHandler(e) {
-    e.preventDefault();
-    document.getElementById('emailForm').checkValidity();
-    if (document.getElementById('emailForm').reportValidity()) {
-      let {name, email, subject, message} = this.state;
-      axios.post('https://us-central1-portfolio-a7892.cloudfunctions.net/submitMessage', {name, email, subject, message})
-        .then(() => {
-          this.setState({
-            name: '',
-            email: '',
-            subject: '',
-            message: '',
-            notification: 'Message sent. Thanks for reaching out!',
-            notificationStyle: { display: 'inline-block' }
-          }, () => setTimeout(() => {
-              this.setState({
-                notification: '',
-                notificationStyle: { display: 'none' }
-              })
-            }, 3000)
-          );
-        })
-        .catch((err) => console.error(err));
-      document.getElementById("emailForm").reset();
-    }
-  }
-
-  render() {
-    return (
-      <div className={classes.ContactForm}>
-          <div className="container">
-            <div className="section-title">Send a message</div>
-            <hr></hr>
-            <form className="contact-form" encType="multipart/form-data" id="emailForm" onSubmit={this.submitHandler}>
-              <div className="">
-                <div className="">
-                  <input className="form-control" name="name" type="text" placeholder="Full Name (required)" required onChange={this.changeHandler}></input>
-                </div>
-                <div className="">
-                  <input className="form-control" name="email" type="email" placeholder="Email (required)" required onChange={this.changeHandler}></input>
-                </div>
+const ContactForm = (props) => {
+  return (
+    <section className={classes.ContactForm}>
+        <div className={[classes.Size, "container"].join(' ')}>
+          <div className="section-title">Send a message</div>
+          <form className={classes.FormBody} encType="multipart/form-data" id="emailForm" onSubmit={props.submit}>
+            <div className={classes.FormRow}>
+              <div className={classes.FormColM}>
+                <input className={classes.FormBox} name="name" type="text" placeholder="Name (required)" required onChange={props.change}></input>
               </div>
-              <br></br>
-              <div className="">
-                <div className="">
-                  <input className="form-control" name="subject" type="text" placeholder="Subject (optional)" onChange={this.changeHandler}></input>
-                </div>
+              <div className={classes.FormColS} />
+              <div className={classes.FormColM}>
+                <input className={classes.FormBox} name="email" type="email" placeholder="Email (required)" required onChange={props.change}></input>
               </div>
-              <br></br>
-              <div className="">
-                <div className="">
-                  <textarea className="form-control" rows="10" name="message" type="text" placeholder="Message (required)" required onChange={this.changeHandler}></textarea>
-                </div>
-              </div>
-              <br></br>
-              <button type="submit" className="btn btn-dark">Send</button>
-              <div className="submit-notification alert alert-success" style={this.state.notificationStyle}>{this.state.notification}</div>
-            </form>
-          </div>
-      </div>
-    );
-  };
+            </div>
+            <br></br>
+            <div className={classes.FormColL}>
+              <input className={classes.FormBox} name="subject" type="text" placeholder="Subject (optional)" onChange={props.change}></input>
+            </div>
+            <br></br>
+            <div className={classes.FormColL}>
+              <textarea className={classes.FormBox} rows="10" name="message" type="text" placeholder="Message (required)" required onChange={props.change}></textarea>
+            </div>
+            <br></br>
+            <div className={classes.ButtonContainer}>
+              <Button type="submit" clicked={props.submitted}>Send</Button>
+              <Button type="reset">Clear</Button>
+              <Button clicked={props.clicked}>Go Back</Button>
+            </div>
+            {/*
+              CHANGE TO MODAL? 
+              <div className="submit-notification alert alert-success" style={props.notificationStyle}>{props.notification}</div>
+            */}
+          </form>
+        </div>
+    </section>
+  );
 }
+
+export default ContactForm;
