@@ -8,7 +8,7 @@ import Toolbar from '../../UI/Toolbar/Toolbar';
 const Layout = (props) => {
   return (
     <Aux>
-      <Toolbar />
+      <Toolbar maintenance={props.maintenance}/>
       {props.children}
     </Aux>
   );

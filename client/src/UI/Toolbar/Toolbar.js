@@ -23,12 +23,16 @@ const Toolbar = (props) => {
       <div id="logo" className={[classes.Logo, 'hide'].join(' ')} onClick={() => scroller("top")}>
         Adam Gienapp
       </div>
-      <ul className={classes.NavLinks}>
-        <NavBtn name="About" clicked={() => scroller('about')} />
-        <NavBtn name="Projects" clicked={() => scroller('projects')} />
-        <NavBtn name="Resume" clicked={() => scroller('resume')} />
-        <NavBtn name="Contact" clicked={() => scroller('contact')} />
-      </ul>
+      {props.maintenance ?
+        null
+        :
+        <ul className={classes.NavLinks}>
+          <NavBtn name="About" clicked={() => scroller('about')} />
+          <NavBtn name="Projects" clicked={() => scroller('projects')} />
+          <NavBtn name="Resume" clicked={() => scroller('resume')} />
+          <NavBtn name="Contact" clicked={() => scroller('contact')} />
+        </ul>
+      }
     </nav>
   );
 }

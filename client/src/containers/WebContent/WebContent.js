@@ -9,6 +9,7 @@ import Projects from '../../components/Projects/Projects';
 import Resume from '../../components/Resume/Resume';
 import ContactContainer from '../ContactContainer/ContactContainer';
 import Footer from '../../components/Footer/Footer';
+import Maintenance from '../../components/Maintenance/Maintenance';
 
 export default class WebContent extends Component{
   constructor(props) {
@@ -60,11 +61,17 @@ export default class WebContent extends Component{
         :
         <Aux>
           <Header />
-          <About />
-          <Projects />
-          <Resume />
-          <ContactContainer />
-          <Footer />
+          {this.props.maintenance ?
+            <Maintenance/>
+            :
+            <Aux>
+              <About />
+              <Projects />
+              <Resume />
+              <ContactContainer />
+              <Footer />
+            </Aux>
+          }
         </Aux>
       }
       </Aux>
