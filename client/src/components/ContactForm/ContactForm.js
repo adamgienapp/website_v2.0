@@ -27,7 +27,7 @@ const ContactForm = (props) => {
             </div>
             <div className={classes.FormRow}>
               <div className={classes.FormColL}>
-                <textarea className={classes.FormBox} rows="10" name="message" type="text" placeholder="Message (required)" required onChange={props.change}></textarea>
+                <textarea className={[classes.FormBox, classes.FormTextArea].join(' ')} name="message" type="text" placeholder="Message (required)" required onChange={props.change}></textarea>
               </div>
             </div>
             <div className={classes.ButtonContainer}>

@@ -7,6 +7,7 @@
 body {
   font-family: 'Raleway', 'Open Sans', sans-serif;
   font-weight: 400;
+  font-size: 16px;
   overflow-x: hidden;
 }
 
@@ -17,7 +18,6 @@ body {
 input, textarea {
   box-sizing: border-box;
   border: none;
-  font-size: larger;
 }
 
 .loader,
@@ -122,7 +122,7 @@ input, textarea {
 
 .section-title {
   margin: 20px 0;
-  font-size: 2.0rem;
+  font-size: 2.0em;
   font-weight: 400;
   text-align: center;
 }

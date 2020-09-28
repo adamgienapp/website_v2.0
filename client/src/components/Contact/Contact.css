@@ -20,42 +20,12 @@
   transition: all 0.3s ease-in-out;
 }
 
-.MessageBtn {
-  display: inline-block;
-  box-sizing: border-box;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  border: 2px solid #212529;
-  border-radius: 5px;
-  background-color: inherit;
-  color: #212529;
-  font-weight: 600;
-  text-align: center;
-  padding: 15px;
-  /* margin-top: 30px; */
-
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.MessageBtn:hover {
-  cursor: pointer;
-  background-color: #212529;
-  color: #fff;
-  transform: scale(1.1);
-}
-
 .SocialLinkContainer {
   text-align: center;
 }
 
 .SocialLink {
-  font-size: 3.5rem;
-  /* line-height: 0.85em; */
+  font-size: 3.5em;
   color: #212529;
   margin: 0 20px;
 
