@@ -12,7 +12,6 @@
 }
 
 .FormBody {
-  min-height: 100%;
   margin-bottom: 30px;
 }
 
@@ -26,6 +25,7 @@
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .FormColL {
@@ -41,5 +41,21 @@
 }
 
 .FormBox {
+  height: 100%;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .FormRow {
+    flex-flow: column;
+  }
+
+  .FormColM {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .FormColS {
+    display: none;
+  }
 }

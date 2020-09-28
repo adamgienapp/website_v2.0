@@ -20,15 +20,16 @@ const ContactForm = (props) => {
                 <input className={classes.FormBox} name="email" type="email" placeholder="Email (required)" required onChange={props.change}></input>
               </div>
             </div>
-            <br></br>
-            <div className={classes.FormColL}>
-              <input className={classes.FormBox} name="subject" type="text" placeholder="Subject (optional)" onChange={props.change}></input>
+            <div className={classes.FormRow}>
+              <div className={classes.FormColL}>
+                <input className={classes.FormBox} name="subject" type="text" placeholder="Subject (optional)" onChange={props.change}></input>
+              </div>
             </div>
-            <br></br>
-            <div className={classes.FormColL}>
-              <textarea className={classes.FormBox} rows="10" name="message" type="text" placeholder="Message (required)" required onChange={props.change}></textarea>
+            <div className={classes.FormRow}>
+              <div className={classes.FormColL}>
+                <textarea className={classes.FormBox} rows="10" name="message" type="text" placeholder="Message (required)" required onChange={props.change}></textarea>
+              </div>
             </div>
-            <br></br>
             <div className={classes.ButtonContainer}>
               <Button type="submit" clicked={props.submitted}>Send</Button>
               <Button type="reset">Clear</Button>
