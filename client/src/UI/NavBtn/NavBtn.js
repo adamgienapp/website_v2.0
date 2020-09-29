@@ -6,11 +6,11 @@ import classes from './NavBtn.css';
 
 const NavBtn = (props) => {
   return (
-    <li id={props.name}
-      className={[classes.NavBtn, "inactive"].join(' ')}
-      onClick={props.clicked} >
-      {props.name}
-    </li>
+    <a id={props.name} onClick={props.clicked} >
+      <div className={[classes.NavBtn, "inactive"].join(' ')}>
+        {props.name}
+      </div>
+    </a>
   );
 }
 

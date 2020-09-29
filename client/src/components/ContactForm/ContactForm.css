@@ -46,7 +46,7 @@
 }
 
 .FormTextArea {
-  min-height: calc(100vh - 425px - 8em);
+  min-height: calc(100vh - 425px - 5.6em);
 }
 
 @media (max-width: 768px) {
@@ -61,5 +61,9 @@
 
   .FormColS {
     display: none;
+  }
+
+  .FormTextArea {
+    min-height: calc(100vh - 425px - 8em);
   }
 }

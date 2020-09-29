@@ -4,11 +4,14 @@
   =====================================
 */
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Raleway', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  overflow-x: hidden;
 }
 
 .btn-focus-off:focus {
