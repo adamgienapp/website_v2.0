@@ -13,13 +13,15 @@ export default class ContactContainer extends Component {
       subject: '',
       message: '',
       notification: '',
-      notificationStyle: { display: 'none' },
+      notificationStyle: true,
+      modalDisplay: false,
       shift: false,
     };
 
     this.shiftHandler = this.shiftHandler.bind(this);
     this.changeHandler = this.changeHandler.bind(this);
     this.submitHandler = this.submitHandler.bind(this);
+    this.modalCloseHandler = this.modalCloseHandler.bind(this);
   }
 
   shiftHandler() {
@@ -49,13 +51,25 @@ export default class ContactContainer extends Component {
             subject: '',
             message: '',
             notification: 'Message sent. Thanks for reaching out!',
-            notificationStyle: { display: 'inline-block' }
+            notificationStyle: true,
+            modalDisplay: true,
           }, () => {
             document.getElementById("emailForm").reset();
           });
         })
-        .catch((err) => console.error(err));
+        .catch((err) => {
+          console.error(err);
+          this.setState({
+            notification: 'There was an error sending your message. Please try again later.'
+          });
+        });
     }
+  }
+
+  modalCloseHandler() {
+    this.setState({
+      modalDisplay: false,
+    });
   }
 
   render() {
@@ -66,6 +80,11 @@ export default class ContactContainer extends Component {
         style={{ transform: this.state.shift ? 'translateX(-100vw)' : 'translateX(0)' }}>
         <Contact clicked={this.shiftHandler}/>
         <ContactForm submitted={this.submitHandler} clicked={this.shiftHandler}/>
+        <Modal show={this.state.modalDisplay} modalClosed={this.modalCloseHandler}>
+          <div className={classes.Notification}>
+            <p className={this.state.notificationStyle ? classes.Success : classes.Error}>{this.state.notification}</p>
+          </div>
+        </Modal>
       </section>
     );
   }
