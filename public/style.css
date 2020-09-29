@@ -23,6 +23,11 @@ input, textarea {
   border: none;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 .loader,
 .loader:before,
 .loader:after {
@@ -139,6 +144,11 @@ input, textarea {
 }
 
 .bg-navy {
+  background-color: #212529;
+}
+
+.expand {
+  color: #fff;
   background-color: #212529;
 }
 

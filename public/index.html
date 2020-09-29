@@ -52,7 +52,7 @@
         const yOffset = 75;
         
         if (window.scrollY < vh * .10) {
-          if (nav.classList.contains('bg-navy')) {
+          if (nav.classList.contains('bg-navy') && !nav.classList.contains('expand')) {
             nav.classList.remove('bg-navy');
           }
         } else {

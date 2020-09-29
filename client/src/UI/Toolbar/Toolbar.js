@@ -14,21 +14,20 @@ const scroller = (anchor) => {
     top: y,
     behavior: 'smooth',
   });
+  const navbar = document.getElementById("navbar");
+  navbar.classList.remove(classes.Opened, 'expand');
 }
 
-const expand = () => {
-  const menuEl = document.getElementById("menu");
-  if (menuEl.classList.contains(classes.Spin)) {
-    menuEl.classList.remove(classes.Spin);
-  } else if (!menuEl.classList.contains(classes.Spin)) {
-    menuEl.classList.add(classes.Spin);
-  }
-
-  const nav = document.getElementById("navbar");
-  if (navbar.className === classes.Toolbar) {
-    navbar.className += `${classes.Responsive}`;
+const toggle = () => {
+  const navbar = document.getElementById("navbar");
+  const toggle = navbar.querySelector(`.${classes.MenuToggle}`);
+  
+  if (navbar.classList.contains(classes.Opened)) {
+    navbar.classList.remove(classes.Opened, 'expand');
+    toggle.setAttribute("aria-label", "Close navigation menu");
   } else {
-    navbar.className = classes.Toolbar;
+    navbar.classList.add(classes.Opened, 'expand');
+    toggle.setAttribute("aria-label", "Open navigation menu");
   }
 }
 
@@ -44,13 +43,19 @@ const Toolbar = (props) => {
         null
         :
         <Aux>
-          <NavBtn name="About" clicked={() => scroller('about')} />
-          <NavBtn name="Projects" clicked={() => scroller('projects')} />
-          <NavBtn name="Resume" clicked={() => scroller('resume')} />
-          <NavBtn name="Contact" clicked={() => scroller('contact')} />
+          <div className={classes.MenuToggle} onClick={toggle} aria-label="Open navigation menu">
+            <div className={classes.IconBar}></div>
+            <div className={classes.IconBar}></div>
+            <div className={classes.IconBar}></div>
+          </div>
 
-          <div className={classes.DropdownBtn} onClick={expand}>
-            <i id="menu" className={[classes.DropdownIcon, "fas fa-plus"].join(' ')}></i>
+          <div className={classes.NavMenu}>
+            <ul className={classes.NavLinks}>
+              <NavBtn name="About" clicked={() => scroller('about')} />
+              <NavBtn name="Projects" clicked={() => scroller('projects')} />
+              <NavBtn name="Resume" clicked={() => scroller('resume')} />
+              <NavBtn name="Contact" clicked={() => scroller('contact')} />
+            </ul>
           </div>
         </Aux>
       }
