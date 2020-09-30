@@ -2,7 +2,7 @@
 import React from 'react';
 //Components
 import classes from './About.css';
-import Arrow from '../../UI/Arrow/Arrow';
+// import Arrow from '../../UI/Arrow/Arrow';
 
 
 const About = (props) => {
@@ -28,9 +28,9 @@ const About = (props) => {
           I'm enthusiastically searching for a great opportunity to apply and expand my technical prowess.
           Let's build something great together!
         </p>
-        <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+        {/* <div style={{ textAlign: 'center', marginBottom: '20px' }}>
           <Arrow target="projects" color="#212529" />
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -9,6 +9,10 @@
   -o-background-size: cover;
   background-position: center;
   background-attachment: fixed;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
 
 @media (max-width: 1024px) {
@@ -18,7 +22,7 @@
 }
 
 .Title {
-  padding-top: 20vh;
+  margin-top: 20vh;
   font-size: 4.0rem;
   font-weight: 600;
   color: #fff;
@@ -59,23 +63,5 @@
 }
 
 .ArrowContainer {
-  padding-top: 50vh;
-}
-
-@media (max-height: 750px) {
-  .ArrowContainer {
-    padding-top: 40vh;
-  }
-}
-
-@media (max-height: 500px) {
-  .ArrowContainer {
-    padding-top: 30vh;
-  }
-}
-
-@media (max-height: 350px) {
-  .ArrowContainer {
-    padding-top: 20vh;
-  }
+  margin-bottom: 10vh;
 }
