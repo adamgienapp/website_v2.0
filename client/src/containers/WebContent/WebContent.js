@@ -5,7 +5,7 @@ import FadeIn from 'react-fade-in';
 import Aux from '../../hoc/Aux/Aux';
 import Header from '../../components/Header/Header';
 import About from '../../components/About/About';
-import Projects from '../../components/Projects/Projects';
+import ProjectsContainer from '../ProjectsContainer/ProjectsContainer';
 import Resume from '../../components/Resume/Resume';
 import ContactContainer from '../ContactContainer/ContactContainer';
 import Footer from '../../components/Footer/Footer';
@@ -66,7 +66,7 @@ export default class WebContent extends Component{
             :
             <Aux>
               <About />
-              <Projects />
+              <ProjectsContainer />
               <Resume />
               <ContactContainer />
               <Footer />

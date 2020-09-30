@@ -1,17 +1,9 @@
-.Projects {
+.ProjectsContainer {
   min-height: calc(100vh - 50px);
-  width: 100vw;
-  background-color: lightslategrey;
-}
-
-.Size {
-  min-height: calc(100vh - 50px);
+  width: 200vw;
   display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-}
+  flex-flow: row;
 
-.ProjectsHide {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;

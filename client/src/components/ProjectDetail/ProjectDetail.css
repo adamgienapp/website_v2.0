@@ -1,0 +1,12 @@
+.ProjectDetail {
+  min-height: calc(100vh - 50px);
+  width: 100vw;
+  background-color: lightslategrey;
+}
+
+.Size {
+  min-height: calc(100vh - 50px);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
