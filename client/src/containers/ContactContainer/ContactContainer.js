@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 import classes from './ContactContainer.css';
 import Contact from '../../components/Contact/Contact';
 import ContactForm from '../../components/ContactForm/ContactForm';
+import Modal from '../../hoc/Modal/Modal';
 
 export default class ContactContainer extends Component {
   constructor(props) {
@@ -79,7 +81,13 @@ export default class ContactContainer extends Component {
         className={classes.ContactContainer}
         style={{ transform: this.state.shift ? 'translateX(-100vw)' : 'translateX(0)' }}>
         <Contact clicked={this.shiftHandler}/>
-        <ContactForm submitted={this.submitHandler} clicked={this.shiftHandler}/>
+        <ContactForm
+          submitted={this.submitHandler}
+          clicked={this.shiftHandler}
+          notificationStyle={this.state.notificationStyle}
+          notification={this.state.notification}
+          modalDisplay={this.state.modalDisplay}
+          close={this.modalCloseHandler} />
         <Modal show={this.state.modalDisplay} modalClosed={this.modalCloseHandler}>
           <div className={classes.Notification}>
             <p className={this.state.notificationStyle ? classes.Success : classes.Error}>{this.state.notification}</p>
