@@ -1,7 +1,6 @@
 .Projects {
   min-height: calc(100vh - 50px);
   width: 100vw;
-  background-color: lightslategrey;
 }
 
 .Size {
@@ -23,4 +22,6 @@
   height: 100%;
   display: flex;
   flex-flow: column wrap;
+  align-items: center;
+  margin-bottom: 44px;
 }

@@ -1,7 +1,5 @@
 .ProjectDetail {
-  min-height: calc(100vh - 50px);
   width: 100vw;
-  background-color: lightslategrey;
 }
 
 .Size {
@@ -9,4 +7,21 @@
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+}
+
+.ImgContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.Image {
+  max-width: 100%;
+}
+
+.BtnContainer {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }

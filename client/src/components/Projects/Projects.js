@@ -13,7 +13,7 @@ const Projects = (props) => {
 
         <div className={classes.ProjectList}>
           {props.projects.map((data) => (
-            <ProjectThumb data={data} key={data.title}/>
+            <ProjectThumb data={data} key={data.title} clicked={() => props.clicked(data)}/>
           ))}
         </div>
         {/* <div style={{ textAlign: 'center', marginBottom: '20px' }}>

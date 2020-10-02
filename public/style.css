@@ -23,6 +23,11 @@ input, textarea {
   border: none;
 }
 
+.list-spacing li{
+  line-height: 1.2;
+  margin-bottom: .5em;
+}
+
 .fade-in {
   transition: opacity 400ms ease 0s,
               top 400ms ease 0s;
