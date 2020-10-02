@@ -11,7 +11,9 @@ const Projects = (props) => {
         <div className="section-title">Select Projects</div>
 
         <div className={classes.ProjectList}>
-
+          {props.projects.map((data) => (
+            <ProjectThumb data={data} key={data.title}/>
+          ))}
         </div>
         {/* <div style={{ textAlign: 'center', marginBottom: '20px' }}>
           <Arrow target="resume" color="#212529" />

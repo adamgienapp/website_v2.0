@@ -1,6 +1,5 @@
 // Packages
 import React, { Component } from 'react';
-import FadeIn from 'react-fade-in';
 //Components
 import Aux from '../../hoc/Aux/Aux';
 import Header from '../../components/Header/Header';
@@ -54,9 +53,9 @@ export default class WebContent extends Component{
       <Aux>
       {this.state.loading ?
         <div className="container">
-          <FadeIn>
+          <div className="fade-in">
             <div className="loader"></div>
-          </FadeIn>
+          </div>
         </div>
         :
         <Aux>

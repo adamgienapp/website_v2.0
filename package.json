@@ -22,7 +22,6 @@
     "postcss-loader": "^4.0.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-fade-in": "^0.1.8",
     "react-router-dom": "^5.2.0",
     "smoothscroll-polyfill": "^0.4.4",
     "style-loader": "^1.2.1"
