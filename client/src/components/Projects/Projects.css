@@ -18,3 +18,9 @@
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+
+.ProjectList {
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+}

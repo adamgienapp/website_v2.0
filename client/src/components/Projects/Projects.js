@@ -2,6 +2,7 @@
 import React from 'react';
 // Components
 import classes from './Projects.css';
+import ProjectThumb from '../ProjectThumb/ProjectThumb';
 // import Arrow from '../../UI/Arrow/Arrow';
 
 const Projects = (props) => {

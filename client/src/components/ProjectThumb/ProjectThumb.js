@@ -7,8 +7,10 @@ const ProjectThumb = (props) => {
   const { title, blurb } = props.data;
 
   return (
-    <div>
-      
+    <div className={classes.ProjectThumb}>
+      {title}
     </div>
   );
 }
+
+export default ProjectThumb;
