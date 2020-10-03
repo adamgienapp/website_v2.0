@@ -74,7 +74,7 @@ export default class ProjectsContainer extends Component {
         {
           title: 'Portfolio v2',
           blurb: 'A ground-up redesign of my portfolio website',
-          image: null,
+          image: '/assets/img/portfolioV2.png',
           info: (
             <ul className="list-spacing">
               <li>A ground-up redesign of my portfolio website</li>
