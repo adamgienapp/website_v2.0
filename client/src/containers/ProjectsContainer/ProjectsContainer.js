@@ -22,7 +22,7 @@ export default class ProjectsContainer extends Component {
               <li>A web companion to the mobile app - allows users to access song library and perform account maintenance</li>
               <li>Fully owned web app development, built from provided UI mockups and feature specifications</li>
               <li>Integrated existing Firebase back end to handle authentication, storage, and hosting</li>
-              <li>Notable features: responsive layout, smooth loading, and a scratch-built media player</li>
+              <li>Notable features: responsive layout, scratch-built media player</li>
             </ul>
           ),
           link: "https://scratchtrack.co",
@@ -67,7 +67,7 @@ export default class ProjectsContainer extends Component {
           info: (
             <ul className="list-spacing">
               <li>A ground-up redesign of my portfolio website</li>
-              <li>Changed from pagination to scroll, and greatly reduced use of third-party dependencies (e.g. Bootstrap, jQuery)</li>
+              <li>Changed from pagination to scroll, and removed use of superfluous frameworks (e.g. Bootstrap, jQuery)</li>
               <li>Built with React, vanilla JS, and CSS3, hosted on Firebase</li>
               <li>Email forwarding accomplished using Nodemailer and Firebase Cloud Functions</li>
             </ul>

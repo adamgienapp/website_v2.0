@@ -9,7 +9,12 @@ const ProjectThumb = (props) => {
   return (
     <div className={classes.ProjectThumb} onClick={props.clicked}>
       <div className={classes.ProjectTitle}>{title}</div>
-      <div className={classes.ProjectBlurb}>{blurb}</div>
+      <div className={classes.ProjectBlurb}>
+        <span style={{ marginLeft: 'auto' }}>{blurb}</span>
+        <span className={classes.Arrow} style={{ margin: '0 15px 0 auto' }}>
+          <i class="fas fa-angle-double-right"></i>
+        </span>
+      </div>
     </div>
   );
 }
