@@ -58,7 +58,7 @@ export default class WebContent extends Component{
           </div>
         </div>
         :
-        <Aux>
+        <main>
           <Header />
           {this.props.maintenance ?
             <Maintenance/>
@@ -71,7 +71,7 @@ export default class WebContent extends Component{
               <Footer />
             </Aux>
           }
-        </Aux>
+        </main>
       }
       </Aux>
     );

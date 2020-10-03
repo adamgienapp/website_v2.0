@@ -16,6 +16,7 @@ export default class ProjectsContainer extends Component {
           title: 'ScratchTrack Web App',
           blurb: 'A web companion to the mobile app',
           image: '/assets/img/scratchtrack_demo.gif',
+          stack: 'React, SASS, Firebase',
           info: (
             <ul className="list-spacing">
               <li>A web companion to the mobile app - allows users to access song library and perform account maintenance</li>
@@ -30,8 +31,8 @@ export default class ProjectsContainer extends Component {
         {
           title: 'REI Search Bar System Design',
           blurb: 'Web-scaling a search bar microservice',
-          // ['/assets/img/sdc_1.svg', '/assets/img/sdc_2.svg', '/assets/img/sdc_3.svg'],
-          image: '/assets/img/sdc_1.svg',
+          image: ['/assets/img/sdc_1.svg', '/assets/img/sdc_2.svg', '/assets/img/sdc_3.svg'],
+          stack: 'React, Node, MongoDB, PostgreSQL, Nginx, AWS EC2, Loader.io',
           info: (
             <ul className="list-spacing">
               <li>Redesigned and scaled the back end of a pre-existing search bar microservice</li>
@@ -46,35 +47,23 @@ export default class ProjectsContainer extends Component {
           title: 'All Day I Dream About Servers',
           blurb: "A mockup of adidas' product detail page",
           image: 'https://i.imgur.com/Sc7qASD.gif',
+          stack: 'React, Node, MySQL, Jest + Enzyme, CircleCI',
           info: (
             <ul className="list-spacing">
               <li>A mockup of adidas' product detail page</li>
               <li>Created the 'Ratings &amp; Reviews' microservice using React, Node/Express, and MySQL</li>
               <li>Utilized service-oriented architecture, built a proxy server to merge all 4 micro services into one cohesive web app</li>
+              <li>Continuous integration testing accomplished using Jest/Enzyme and CircleCI</li>
             </ul>
           ),
           link: "http://3.101.29.112/1/",
           github: "https://github.com/All-Day-I-Dream-About-Servers/review-service",
         },
         {
-          title: 'Portfolio v1',
-          blurb: 'The initial build of my portfolio website',
-          image: null,
-          info: (
-            <ul className="list-spacing">
-              <li>The initial build of my portfolio website</li>
-              <li>A self-motivated opportunity for continued learning: first exposures to React Router, Bootstrap, and Nodemailer</li>
-              <li>Built using React, Bootstrap and CSS3, hosted on AWS</li>
-              <li>Email forwarding accomplished with Nodemailer</li>
-            </ul>
-          ),
-          link: "https://adamgienapp.github.io/",
-          github: "https://github.com/adamgienapp/website_v1.0",
-        },
-        {
           title: 'Portfolio v2',
           blurb: 'A ground-up redesign of my portfolio website',
           image: '/assets/img/portfolioV2.png',
+          stack: 'React, Nodemailer, Firebase',
           info: (
             <ul className="list-spacing">
               <li>A ground-up redesign of my portfolio website</li>
@@ -85,6 +74,22 @@ export default class ProjectsContainer extends Component {
           ),
           link: null,
           github: "https://github.com/adamgienapp/website_v2.0",
+        },
+        {
+          title: 'Portfolio v1',
+          blurb: 'The initial build of my portfolio website',
+          image: '/assets/img/portfolioV1.gif',
+          stack: 'React, Bootstrap, Nodemailer, Firebase',
+          info: (
+            <ul className="list-spacing">
+              <li>The initial build of my portfolio website</li>
+              <li>A self-motivated opportunity for continued learning: first exposures to React Router, Bootstrap, and Nodemailer</li>
+              <li>Built using React, Bootstrap and CSS3, hosted on AWS</li>
+              <li>Email forwarding accomplished with Nodemailer</li>
+            </ul>
+          ),
+          link: "https://adamgienapp.github.io/",
+          github: "https://github.com/adamgienapp/website_v1.0",
         }
       ],
       detail: {

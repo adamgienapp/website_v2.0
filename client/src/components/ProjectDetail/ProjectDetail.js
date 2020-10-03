@@ -4,7 +4,7 @@ import classes from './ProjectDetail.css';
 import Button from '../../UI/Button/Button';
 
 const ProjectDetail = (props) => {
-  const { title, image, info, link, github } = props.data;
+  const { title, image, stack, info, link, github } = props.data;
 
   let imageBlock = null;
 
@@ -34,6 +34,9 @@ const ProjectDetail = (props) => {
         <div className="section-title">{title}</div>
         <div className={classes.ImgContainer}>
           {imageBlock}
+        </div>
+        <div className={classes.ProjectStack}>
+          <strong>Tech stack</strong> | {stack}
         </div>
         {info}
         <div className={classes.BtnContainer}>

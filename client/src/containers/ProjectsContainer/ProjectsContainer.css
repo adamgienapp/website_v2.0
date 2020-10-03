@@ -3,7 +3,7 @@
   width: 200vw;
   display: flex;
   flex-flow: row;
-  background-color: lightslategray;
+  background-color: #A2B5CD;
 
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;

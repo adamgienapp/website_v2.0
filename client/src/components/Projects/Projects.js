@@ -3,7 +3,6 @@ import React from 'react';
 // Components
 import classes from './Projects.css';
 import ProjectThumb from '../ProjectThumb/ProjectThumb';
-// import Arrow from '../../UI/Arrow/Arrow';
 
 const Projects = (props) => {
   return (
@@ -16,9 +15,6 @@ const Projects = (props) => {
             <ProjectThumb data={data} key={data.title} clicked={() => props.clicked(data)}/>
           ))}
         </div>
-        {/* <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-          <Arrow target="resume" color="#212529" />
-        </div> */}
       </div>
     </section>
   );
