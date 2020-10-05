@@ -15,8 +15,7 @@ const About = (props) => {
             backgroundImage: 'url(/assets/img/DK53A3i4.jpeg)'
           }}></div>
         <p className={classes.AboutBlurb}>
-          Hi, I'm Adam! I'm a full-stack software developer with a passion for solving complex problems.
-          I seek out opportunities to challenge myself, and find that's when I perform my best.
+          Hi! I'm Adam, a full-stack software developer based in Los Angeles, CA.
           <br/><br/>
           With nearly a decade of experience as a mechanical engineer, I have a proven track record
           of developing impactful, innovative products from concept through production. I'm drawn to

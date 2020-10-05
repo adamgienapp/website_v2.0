@@ -18,6 +18,7 @@ export default class ContactContainer extends Component {
       notificationStyle: true,
       modalDisplay: false,
       shift: false,
+      preventSpam: false,
     };
 
     this.shiftHandler = this.shiftHandler.bind(this);
@@ -44,27 +45,41 @@ export default class ContactContainer extends Component {
     e.preventDefault();
     document.getElementById('emailForm').checkValidity();
     if (document.getElementById('emailForm').reportValidity()) {
-      let {name, email, subject, message} = this.state;
-      axios.post('https://us-central1-portfolio-a7892.cloudfunctions.net/submitMessage', {name, email, subject, message})
-        .then(() => {
-          this.setState({
-            name: '',
-            email: '',
-            subject: '',
-            message: '',
-            notification: 'Message sent. Thanks for reaching out!',
-            notificationStyle: true,
-            modalDisplay: true,
-          }, () => {
-            document.getElementById("emailForm").reset();
-          });
-        })
-        .catch((err) => {
-          console.error(err);
-          this.setState({
-            notification: 'There was an error sending your message. Please try again later.'
-          });
+      if (this.state.preventSpam) {
+        this.setState({
+          notification: "You've sent a message recently. Please wait at least 20 seconds before sending another.",
+          notificationStyle: true,
+          modalDisplay: true,
         });
+      } else {
+        let {name, email, subject, message} = this.state;
+        axios.post('https://us-central1-portfolio-a7892.cloudfunctions.net/submitMessage', {name, email, subject, message})
+          .then(() => {
+            this.setState({
+              name: '',
+              email: '',
+              subject: '',
+              message: '',
+              notification: 'Message sent. Thanks for reaching out!',
+              notificationStyle: true,
+              modalDisplay: true,
+              preventSpam: true,
+            }, () => {
+              document.getElementById("emailForm").reset();
+              setTimeout(() => {
+                this.setState({
+                  preventSpam: false
+                });
+              }, 20000);
+            });
+          })
+          .catch((err) => {
+            console.error(err);
+            this.setState({
+              notification: 'There was an error sending your message. Please try again later.'
+            });
+          });
+      }
     }
   }
 
