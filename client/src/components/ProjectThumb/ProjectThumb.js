@@ -12,7 +12,7 @@ const ProjectThumb = (props) => {
       <div className={classes.ProjectBlurb}>
         <span style={{ marginLeft: 'auto' }}>{blurb}</span>
         <span className={classes.Arrow} style={{ margin: '0 15px 0 auto' }}>
-          <i class="fas fa-angle-double-right"></i>
+          <i className="fas fa-angle-double-right"></i>
         </span>
       </div>
     </div>
