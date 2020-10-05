@@ -30,7 +30,7 @@ const ProjectDetail = (props) => {
             style={{ display: idx === slide ? 'block' : 'none' }}
             key={src}>
             <div className={classes.SlideNumber}>{idx + 1} / {image.length}</div>
-            <img className={classes.Image} src={src}></img>
+            <img className={classes.Image} src={src} alt={`${title} image #${idx + 1}`}></img>
           </div>
         ))}
         <a className={classes.Prev} onClick={() => changeSlide(-1)}>
