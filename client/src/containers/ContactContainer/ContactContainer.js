@@ -76,7 +76,16 @@ export default class ContactContainer extends Component {
           .catch((err) => {
             console.error(err);
             this.setState({
-              notification: 'There was an error sending your message. Please try again later.'
+              notification: 'There was an error sending your message. Please try again later.',
+              notificationStyle: false,
+              modalDisplay: true,
+              preventSpam: true,
+            }, () => {
+              setTimeout(() => {
+                this.setState({
+                  preventSpam: false
+                });
+              }, 20000);
             });
           });
       }
