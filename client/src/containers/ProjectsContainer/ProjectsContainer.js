@@ -15,7 +15,7 @@ export default class ProjectsContainer extends Component {
         {
           title: 'ScratchTrack Web App',
           blurb: 'A web companion to the mobile app',
-          image: '/assets/img/scratchtrack_demo.gif',
+          youtube: 'https://www.youtube.com/embed/YSrHBuNEwEk',
           stack: 'React, SASS, Firebase',
           info: (
             <ul className="list-spacing">
@@ -78,7 +78,7 @@ export default class ProjectsContainer extends Component {
         {
           title: 'Portfolio v1',
           blurb: 'The initial build of my portfolio website',
-          image: '/assets/img/portfolioV1.gif',
+          youtube: 'https://www.youtube.com/embed/tP67UhORw7Y',
           stack: 'React, Bootstrap, Nodemailer, Firebase',
           info: (
             <ul className="list-spacing">

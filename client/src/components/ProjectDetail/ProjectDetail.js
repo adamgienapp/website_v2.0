@@ -4,11 +4,21 @@ import classes from './ProjectDetail.css';
 import Button from '../../UI/Button/Button';
 
 const ProjectDetail = (props) => {
-  const { title, image, stack, info, link, github } = props.data;
+  const { title, image, youtube, stack, info, link, github } = props.data;
 
   let imageBlock = null;
 
-  if (Array.isArray(image)) {
+  if (youtube) {
+    imageBlock = (
+      <div className={classes.VideoContainer}>
+        <iframe
+          className={classes.Video}
+          src="https://www.youtube.com/embed/YSrHBuNEwEk" frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen={true} webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true">
+        </iframe>
+      </div> );
+  } else if (Array.isArray(image)) {
     const [slide, setSlide] = useState(0);
 
     const changeSlide = (delta) => {
@@ -23,6 +33,7 @@ const ProjectDetail = (props) => {
     }
 
     imageBlock = (
+      <div className={classes.SlideshowContainer}>
       <div className={classes.Slideshow}>
         {image.map((src, idx) => (
           <div
@@ -40,10 +51,13 @@ const ProjectDetail = (props) => {
           <i className={"fa fa-angle-right"} aria-hidden="true"></i>
         </a>
       </div>
+      </div>
     );
   } else {
     imageBlock = image ? (
-      <img className={classes.Image} src={image} alt={`${title} image`}></img>
+      <div className={classes.ImgContainer}>
+        <img className={classes.Image} src={image} alt={`${title} image`}></img>
+      </div>
     )
     :
     null;
@@ -61,9 +75,7 @@ const ProjectDetail = (props) => {
     <section className={classes.ProjectDetail}>
       <div className={[classes.Size, "container"].join(' ')}>
         <div className="section-title">{title}</div>
-        <div className={classes.ImgContainer}>
-          {imageBlock}
-        </div>
+        {imageBlock}
         <div className={classes.ProjectStack}>
           <strong>Tech stack</strong> | {stack}
         </div>

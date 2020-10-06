@@ -10,12 +10,23 @@
 }
 
 .ImgContainer {
-  height: 100%;
-  width: 100%;
+  margin: 0 auto;
 }
 
 .Image {
-  max-width: 100%;
+  width: 100%;
+  max-width: 666px;
+}
+
+.VideoContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.Video {
+  height: 315px;
+  width: 100%;
+  max-width: 666px;
 }
 
 .BtnContainer {
@@ -26,9 +37,15 @@
   margin-bottom: 20px;
 }
 
+.SlideshowContainer {
+  display: flex;
+  justify-content: center;;
+}
+
 .Slideshow {
-  max-width: 100%;
   position: relative;
+  width: 100%;
+  max-width: 666px;
 }
 
 .Prev, .Next {
