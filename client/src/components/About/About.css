@@ -1,5 +1,5 @@
 .About {
-  min-height: calc(100vh - 50px);
+  min-height: calc(66vh - 50px);
 }
 
 .AboutHide {
@@ -11,29 +11,34 @@
 }
 
 .Size {
-  min-height: calc(100vh - 50px);
+  min-height: calc(66vh - 50px);
   display: flex;
   flex-flow: column;
   justify-content: space-between;
 }
 
-/* .ContentWrap {
-  
-} */
+.ContentWrap {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 66px;
+}
 
 .PicWindow {
   height: 250px;
-  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
   border-radius: 35px;
   background-size: 250px auto;
   background-position-x: 70%;
   background-position-y: 10%;
-  margin: 0 auto 0 auto;
+  margin: 0 auto 0 0;
 }
 
 .AboutBlurb {
-  margin-block-start: 2em;
-  margin-bottom: 60px;
+  margin-left: 25px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.25;
 }
 
 .Maintenance {
@@ -44,4 +49,21 @@
   text-align: center;
   font-style: italic;
   font-size: 2.0em;
+}
+
+@media (max-width: 800px) {
+  .ContentWrap {
+    flex-direction: column;
+  }
+
+  .PicWindow {
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  .AboutBlurb {
+    max-width: none;
+    margin-left: 0;
+    margin-block-start: 2em;
+  }
 }

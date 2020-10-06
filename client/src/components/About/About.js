@@ -9,23 +9,24 @@ const About = (props) => {
     <section id="about" className={classes.About}>
       <div id="aboutContent" className={[classes.Size, classes.AboutHide, 'container', 'scroll-show'].join(' ')}>
         <div className="section-title">About Me</div>
-        <div
-          className={classes.PicWindow}
-          style={{
-            backgroundImage: 'url(/assets/img/DK53A3i4.jpeg)'
-          }}></div>
-        <p className={classes.AboutBlurb}>
-          Hi! I'm Adam, a full-stack software developer based in Los Angeles, CA.
-          <br/><br/>
-          With nearly a decade of experience as a mechanical engineer, I have a proven track record
-          of developing impactful, innovative products from concept through production. I'm drawn to
-          programming by its limitless potential to drive positive global change, and I love the immediacy
-          of the design process - the ability to design, test, and iterate is literally right at your
-          fingertips.
-          <br/><br/>
-          I'm enthusiastically searching for a great opportunity to apply and expand my technical prowess.
-          Let's build something great together!
-        </p>
+        <div className={classes.ContentWrap}>
+          <div
+            className={classes.PicWindow}
+            style={{
+              backgroundImage: 'url(/assets/img/DK53A3i4.jpeg)'
+            }}></div>
+          <div>
+            <p className={classes.AboutBlurb}>
+              Hi! I'm Adam, a full-stack software developer based in Los Angeles, CA.
+              <br/><br/>
+              I enjoy building everything from applications to websites, with the ever-present goal to make a positive impact in peoples' lives.
+              When I'm not writing clean, performant code, you can find me pursuing one of my many hobbies such as film photography, motorsports, and rock climbing.
+              <br/><br/>
+              Currently, I'm enthusiastically searching for a great opportunity to apply and expand my technical prowess.
+              Let's build something great together!
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
