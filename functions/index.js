@@ -3,7 +3,7 @@
 const functions = require('firebase-functions');
 const nodemailer = require('nodemailer');
 const cors = require('cors')({ origin: true });
-const gmail = require('./nodemailer.config');
+const gmail =  require('./nodemailer.config');
 
 const mailTransport = nodemailer.createTransport({
   service: 'gmail',
@@ -14,9 +14,9 @@ const mailTransport = nodemailer.createTransport({
 });
 
 exports.submitMessage = functions.https.onRequest((req, res) => {
-  cors()(req, res, () => {
+  cors(req, res, () => {
     if (req.method !== 'POST') {
-      res.status(500).send({ success: false });
+      res.status(500).send('Wrong request type!');
       return;
     }
 
@@ -35,7 +35,8 @@ exports.submitMessage = functions.https.onRequest((req, res) => {
         return;
       })
       .catch((error) => {
-        res.status(500).send({ error });
+        console.log("You've hit this error");
+        res.status(500).send({ failure: error });
         return;
       });
   });

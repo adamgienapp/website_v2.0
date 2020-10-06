@@ -9,6 +9,7 @@ bundle.js
 .firebase
 .firebaserc
 firebase.json
+firebase-debug.log
 
 #keys
 PROCESS_ENV.js
