@@ -47,6 +47,12 @@
   justify-content: center;
 }
 
+.Text {
+  max-width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .Arrow {
   font-size: 2em;
 }

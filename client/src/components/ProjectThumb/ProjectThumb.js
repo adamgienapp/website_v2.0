@@ -10,10 +10,10 @@ const ProjectThumb = (props) => {
     <div className={classes.ProjectThumb} onClick={props.clicked}>
       <div className={classes.ProjectTitle}>{title}</div>
       <div className={classes.ProjectBlurb}>
-        <span style={{ marginLeft: 'auto'}}>{blurb}</span>
-        <span className={classes.Arrow} style={{ margin: '0 15px 0 auto' }}>
+        <div className={classes.Text}>{blurb}</div>
+        <div className={classes.Arrow} style={{ margin: '0 15px 0 -43px' }}>
           <i className="fas fa-angle-double-right"></i>
-        </span>
+        </div>
       </div>
     </div>
   );
