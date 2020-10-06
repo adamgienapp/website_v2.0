@@ -11,3 +11,8 @@
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+
+.DetailList {
+  max-width: 666px;
+  margin: 0 auto;
+}

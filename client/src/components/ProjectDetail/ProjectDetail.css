@@ -29,14 +29,6 @@
   max-width: 666px;
 }
 
-.BtnContainer {
-  width: 100%;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
 .SlideshowContainer {
   display: flex;
   justify-content: center;;
@@ -101,4 +93,17 @@
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+.ProjectStack {
+  width: 666px;
+  margin: 0 auto;
+}
+
+.BtnContainer {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }

@@ -18,7 +18,7 @@ export default class ProjectsContainer extends Component {
           youtube: 'https://www.youtube.com/embed/YSrHBuNEwEk',
           stack: 'React, SASS, Firebase',
           info: (
-            <ul className="list-spacing">
+            <ul className={[classes.DetailList, "list-spacing"].join(' ')}>
               <li>A web companion to the mobile app - allows users to access song library and perform account maintenance</li>
               <li>Fully owned web app development, built from provided UI mockups and feature specifications</li>
               <li>Integrated existing Firebase back end to handle authentication, storage, and hosting</li>
@@ -34,7 +34,7 @@ export default class ProjectsContainer extends Component {
           image: ['/assets/img/sdc_1.svg', '/assets/img/sdc_2.svg', '/assets/img/sdc_3.svg'],
           stack: 'React, Node, MongoDB, PostgreSQL, Nginx, AWS EC2, Loader.io',
           info: (
-            <ul className="list-spacing">
+            <ul className={[classes.DetailList, "list-spacing"].join(' ')}>
               <li>Redesigned and scaled the back end of a pre-existing search bar microservice</li>
               <li>Modelled application data in PostgreSQL, utilized GIN indexing to reduce query time in a data pool of 10M entries (worst-case latency reduced from 31s to 2s)</li>
               <li>Horizontally scaled to 4 EC2 micro instances behind a Nginx load balancer to increase throughput from 750 RPS to 3750 RPS with an average latency of 71ms and 0.1% error rate</li>
@@ -49,7 +49,7 @@ export default class ProjectsContainer extends Component {
           image: 'https://i.imgur.com/Sc7qASD.gif',
           stack: 'React, Node, MySQL, Jest + Enzyme, CircleCI',
           info: (
-            <ul className="list-spacing">
+            <ul className={[classes.DetailList, "list-spacing"].join(' ')}>
               <li>A mockup of adidas' product detail page</li>
               <li>Created the 'Ratings &amp; Reviews' microservice using React, Node/Express, and MySQL</li>
               <li>Utilized service-oriented architecture, built a proxy server to merge all 4 micro services into one cohesive web app</li>
@@ -65,7 +65,7 @@ export default class ProjectsContainer extends Component {
           image: '/assets/img/portfolioV2.png',
           stack: 'React, Nodemailer, Firebase',
           info: (
-            <ul className="list-spacing">
+            <ul className={[classes.DetailList, "list-spacing"].join(' ')}>
               <li>A ground-up redesign of my portfolio website</li>
               <li>Changed from pagination to scroll, and removed use of superfluous frameworks (e.g. Bootstrap, jQuery)</li>
               <li>Built with React, vanilla JS, and CSS3, hosted on Firebase</li>
@@ -81,7 +81,7 @@ export default class ProjectsContainer extends Component {
           youtube: 'https://www.youtube.com/embed/tP67UhORw7Y',
           stack: 'React, Bootstrap, Nodemailer, Firebase',
           info: (
-            <ul className="list-spacing">
+            <ul className={[classes.DetailList, "list-spacing"].join(' ')}>
               <li>The initial build of my portfolio website</li>
               <li>A self-motivated opportunity for continued learning: first exposures to React Router, Bootstrap, and Nodemailer</li>
               <li>Built using React, Bootstrap and CSS3, hosted on AWS</li>
