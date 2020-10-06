@@ -20,7 +20,8 @@
 .ContentWrap {
   display: flex;
   flex-direction: row;
-  margin-bottom: 66px;
+  margin: 0 auto 66px auto;
+  max-width: 750px;
 }
 
 .PicWindow {
