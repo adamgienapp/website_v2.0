@@ -52,8 +52,9 @@ export default class ContactContainer extends Component {
           modalDisplay: true,
         });
       } else {
-        let {name, email, subject, message} = this.state;
-        axios.post('https://us-central1-portfolio-a7892.cloudfunctions.net/submitMessage', {name, email, subject, message})
+        const { name, email, subject, message } = this.state;
+
+        axios.post('https://us-central1-portfolio-a7892.cloudfunctions.net/submitMessage', { name, email, subject, message })
           .then(() => {
             this.setState({
               name: '',
@@ -106,6 +107,7 @@ export default class ContactContainer extends Component {
         style={{ transform: this.state.shift ? 'translateX(-100vw)' : 'translateX(0)' }}>
         <Contact clicked={this.shiftHandler}/>
         <ContactForm
+          change={this.changeHandler}
           submitted={this.submitHandler}
           clicked={this.shiftHandler}
           notificationStyle={this.state.notificationStyle}

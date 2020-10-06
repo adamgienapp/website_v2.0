@@ -25,8 +25,10 @@ exports.submitMessage = functions.https.onRequest((req, res) => {
       replyTo: req.body.email,
       to: gmail.acct,
       subject: `${req.body.name} sent you a message from adamgienapp.com`,
-      text: req.body.message,
-      html: `<p>${req.body.message}`
+      text: `Subject: ${req.body.subject} \n\n 
+            Text: ${req.body.message}`,
+      html: `<p>SUBJECT: ${req.body.subject}</p>
+            <p>${req.body.message}</p>`
     };
 
     mailTransport.sendMail(mailOptions)
