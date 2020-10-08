@@ -78,7 +78,7 @@ export default class ProjectsContainer extends Component {
         {
           title: 'Portfolio v1',
           blurb: 'The initial build of my portfolio website',
-          youtube: 'https://www.youtube.com/embed/tP67UhORw7Y',
+          youtube: 'https://www.youtube.com/embed/Gp0xMzgsFIE',
           stack: 'React, Bootstrap, Nodemailer, Firebase',
           info: (
             <ul className={[classes.DetailList, "list-spacing"].join(' ')}>

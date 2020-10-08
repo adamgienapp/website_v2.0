@@ -12,7 +12,7 @@ const ProjectDetail = (props) => {
       <div className={classes.VideoContainer}>
         <iframe
           className={classes.Video}
-          src="https://www.youtube.com/embed/YSrHBuNEwEk" frameBorder="0"
+          src={youtube} frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen={true} webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true">
         </iframe>
@@ -32,7 +32,6 @@ const ProjectDetail = (props) => {
     }
 
     imageBlock = (
-      <div className={classes.SlideshowContainer}>
       <div className={classes.Slideshow}>
         {image.map((src, idx) => (
           <div
@@ -50,16 +49,12 @@ const ProjectDetail = (props) => {
           <i className={"fa fa-angle-right"} aria-hidden="true"></i>
         </a>
       </div>
-      </div>
     );
   } else {
-    imageBlock = image ? (
-      <div className={classes.ImgContainer}>
-        <img className={classes.Image} src={image} alt={`${title} image`}></img>
-      </div>
-    )
-    :
-    null;
+    imageBlock = image ?
+      <img className={classes.Image} src={image} alt={`${title} image`}></img>
+      :
+      null;
   }
 
   const reset = {
@@ -72,17 +67,19 @@ const ProjectDetail = (props) => {
 
   return (
     <section className={classes.ProjectDetail}>
-      <div className={[classes.Size, "container"].join(' ')}>
-        <div className="section-title">{title}</div>
+      <div className={classes.Size}>
         {imageBlock}
-        <div className={classes.ProjectStack}>
-          <strong>Tech stack</strong> | {stack}
-        </div>
-        {info}
+        <div className="container">
+          <div className="section-title">{title}</div>
+          <div className={classes.ProjectStack}>
+            <strong>Tech stack</strong> | {stack}
+          </div>
+          {info}
         <div className={classes.BtnContainer}>
           { link ? <a href={link} target="_blank"><Button>Visit</Button></a> : null }
           { github ? <a href={github} target="_blank"><Button>Github Repo</Button></a> : null }
           <Button clicked={() => props.shift(reset)}>Back to projects</Button>
+        </div>
         </div>
       </div>
     </section>
