@@ -8,7 +8,7 @@ const About = (props) => {
   return (
     <section id="about" className={classes.About}>
       <div id="aboutContent" className={[classes.Size, classes.AboutHide, 'container', 'scroll-show'].join(' ')}>
-        <div className="section-title">About Me</div>
+        <div className="section-title light">Hi, I'm Adam</div>
         <div className={classes.ContentWrap}>
           <div
             className={classes.PicWindow}
@@ -17,10 +17,10 @@ const About = (props) => {
             }}></div>
           <div>
             <p className={classes.AboutBlurb}>
-              Hi! I'm Adam, a full-stack software developer based in Los Angeles, CA.
+              I'm a full-stack software developer based in Los Angeles, CA.
               <br/><br/>
               I enjoy building everything from applications to websites, with the ever-present goal to make a positive impact in peoples' lives.
-              When I'm not writing clean, performant code, you can find me pursuing one of my many hobbies such as film photography, motorsports, and rock climbing.
+              When I'm not writing clean, performant code, you can find me pursuing one of my many hobbies such as film photography, motorsports, or rock climbing.
               <br/><br/>
               Currently, I'm enthusiastically searching for a great opportunity to apply and expand my technical prowess.
               Let's build something great together!

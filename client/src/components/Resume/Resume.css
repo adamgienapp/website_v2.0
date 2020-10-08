@@ -17,6 +17,11 @@
   transition: all 0.3s ease-in-out;
 }
 
+.ResumeBlurb {
+  max-width: 666px;
+  margin: 0 auto;
+}
+
 .ListItem {
   line-height: 1.15;
   padding-bottom: 10px;

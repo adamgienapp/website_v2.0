@@ -7,7 +7,6 @@ const ProjectDetail = (props) => {
   const { title, image, youtube, stack, info, link, github } = props.data;
 
   let imageBlock = null;
-
   if (youtube) {
     imageBlock = (
       <div className={classes.VideoContainer}>

@@ -8,7 +8,7 @@ const Projects = (props) => {
   return (
     <section className={classes.Projects}>
       <div id="projectsContent" className={[classes.Size, classes.ProjectsHide, 'container', 'scroll-show'].join(' ')}>
-        <div className="section-title">Select Projects</div>
+        <div className="section-title white">Select Projects</div>
 
         <div className={classes.ProjectList}>
           {props.projects.map((data) => (

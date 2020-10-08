@@ -1,5 +1,5 @@
 .About {
-  min-height: calc(66vh - 50px);
+  min-height: calc(70vh - 50px);
 }
 
 .AboutHide {
@@ -11,7 +11,7 @@
 }
 
 .Size {
-  min-height: calc(66vh - 50px);
+  min-height: calc(70vh - 50px);
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -36,7 +36,7 @@
 }
 
 .AboutBlurb {
-  margin-left: 25px;
+  margin-left: 40px;
   text-align: justify;
   text-justify: inter-word;
   line-height: 1.25;
@@ -52,7 +52,7 @@
   font-size: 2.0em;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .ContentWrap {
     flex-direction: column;
   }
@@ -60,6 +60,7 @@
   .PicWindow {
     margin-top: 0;
     margin-left: auto;
+    margin-bottom: 20px;
   }
 
   .AboutBlurb {

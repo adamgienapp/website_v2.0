@@ -9,7 +9,7 @@ const Resume = (props) => {
   return (
     <section id="resume" className={classes.Resume}>
       <div id="resumeContent" className={[classes.Size, classes.ResumeHide, 'container', 'scroll-show'].join(' ')}>
-        <div className="section-title">My Resume</div>
+        <div className="section-title light">My Resume</div>
         <div className={classes.ResumeBlurb}>
           The quick version:
           <ul>
@@ -23,7 +23,7 @@ const Resume = (props) => {
             </li>
           </ul>
         </div>
-        <div style={{ textAlign: 'center', margin: '30px 0' }}>
+        <div style={{ textAlign: 'center', margin: '25px 0 40px 0' }}>
           <a className={classes.ATagClear} href="/assets/adam-gienapp-resume.pdf" >
             <Button>
               Download a copy

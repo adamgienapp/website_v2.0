@@ -19,7 +19,7 @@
 }
 
 .ProjectList {
-  margin: auto 0;
+  margin: 20px 0;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
