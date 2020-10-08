@@ -9,47 +9,45 @@
   justify-content: space-between;
 }
 
-.ImgContainer {
-  margin: 0 auto;
+.ImageContainer {
+  display: flex;
+  justify-content: center;
+  background-color: #212529;
 }
 
 .Image {
-  width: 100%;
-  max-width: 666px;
+  display: block;
+  max-height: 60vh;
+  max-width: 100%;
 }
 
 .VideoContainer {
-  display: flex;
-  justify-content: center;
+  position: relative;
+  padding-bottom: 60vh;
 }
 
 .Video {
-  height: 315px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
-  max-width: 666px;
-}
-
-.SlideshowContainer {
-  display: flex;
-  justify-content: center;;
 }
 
 .Slideshow {
   position: relative;
-  width: 100%;
-  max-width: 666px;
 }
 
 .Prev, .Next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: calc(50% - 34px);
   width: auto;
   margin-top: -22px;
   padding: 16px;
   color: #212529;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 2em;
   opacity: 0.4;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
@@ -70,7 +68,7 @@
 
 .SlideNumber {
   color: #212529;
-  font-size: 12px;
+  font-size: 1em;
   font-weight: 600;
   padding: 8px 12px;
   position: absolute;
@@ -95,10 +93,28 @@
   to {opacity: 1}
 }
 
+.InfoBlock {
+  display: flex;
+  flex-direction: row;
+}
+
+.InfoLeft {
+  width: 40%;
+  margin-right: 20px;
+}
+
+.ProjectTitle {
+  margin: 25px 0;
+  font-size: 3.1em;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
 .ProjectStack {
-  width: 666px;
-  font-size: 1.2em;
-  margin: 25px auto;
+  margin-top: 25px;
+  font-size: 1.1em;
+  text-align: center;
 }
 
 .BtnContainer {
@@ -106,5 +122,16 @@
   display: flex;
   flex-flow: row;
   justify-content: space-around;
-  margin: 30px 0;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 992px) {
+  .InfoBlock {
+    flex-direction: column;
+  }
+
+  .InfoLeft {
+    width: 100%;
+    margin-right: 0;
+  }
 }

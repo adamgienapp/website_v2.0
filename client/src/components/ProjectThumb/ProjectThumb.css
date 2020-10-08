@@ -1,10 +1,9 @@
 .ProjectThumb {
   position: relative;
-  height: 100px;
+  height: 80px;
   width: 80%;
-  min-width: 350px;
   max-width: 580px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   background-color: #212529;
   color: #fff;
   border-radius: 10px;
@@ -24,10 +23,13 @@
   left: 0;
   right: 0;
 
+  box-sizing: border-box;
+  padding: 0 10px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  height: 80px;
   font-size: 1.4em;
   font-weight: 700;
   background-color: inherit;
@@ -45,7 +47,7 @@
 }
 
 .ProjectBlurb {
-  height: 100px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;

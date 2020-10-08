@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import classes from './ProjectDetail.css';
 import Button from '../../UI/Button/Button';
 
+
 const ProjectDetail = (props) => {
-  const { title, image, youtube, stack, info, link, github } = props.data;
+  const { title, shorthand, image, youtube, stack, info, link, github } = props.data;
 
   let imageBlock = null;
   if (youtube) {
@@ -12,7 +13,7 @@ const ProjectDetail = (props) => {
       <div className={classes.VideoContainer}>
         <iframe
           className={classes.Video}
-          src="https://www.youtube.com/embed/YSrHBuNEwEk" frameBorder="0"
+          src={youtube} frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen={true} webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true">
         </iframe>
@@ -32,39 +33,41 @@ const ProjectDetail = (props) => {
     }
 
     imageBlock = (
-      <div className={classes.SlideshowContainer}>
-      <div className={classes.Slideshow}>
-        {image.map((src, idx) => (
-          <div
-            className={classes.Fade}
-            style={{ display: idx === slide ? 'block' : 'none' }}
-            key={src}>
-            <div className={classes.SlideNumber}>{idx + 1} / {image.length}</div>
-            <img className={classes.Image} src={src} alt={`${title} image #${idx + 1}`}></img>
-          </div>
-        ))}
-        <a className={classes.Prev} onClick={() => changeSlide(-1)}>
-          <i className={"fa fa-angle-left"} aria-hidden="true"></i>
-        </a>
-        <a className={classes.Next} onClick={() => changeSlide(1)}>
-          <i className={"fa fa-angle-right"} aria-hidden="true"></i>
-        </a>
-      </div>
+      <div className={classes.ImageContainer}>
+        <div className={classes.Slideshow}>
+          {image.map((src, idx) => (
+            <div
+              className={classes.Fade}
+              style={{ display: idx === slide ? 'block' : 'none' }}
+              key={src}>
+              <div className={classes.SlideNumber}>{idx + 1} / {image.length}</div>
+              <img className={classes.Image} src={src} alt={`${title} image #${idx + 1}`}></img>
+            </div>
+          ))}
+          <a className={classes.Prev} onClick={() => changeSlide(-1)}>
+            <i className={"fa fa-angle-left"} aria-hidden="true"></i>
+          </a>
+          <a className={classes.Next} onClick={() => changeSlide(1)}>
+            <i className={"fa fa-angle-right"} aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
     );
   } else {
-    imageBlock = image ? (
-      <div className={classes.ImgContainer}>
+    imageBlock = image ?
+      <div className={classes.ImageContainer}>
         <img className={classes.Image} src={image} alt={`${title} image`}></img>
       </div>
-    )
-    :
-    null;
+      :
+      null;
   }
 
   const reset = {
     title: null,
+    shorthand: null,
     image: null,
+    youtube: null,
+    stack: null,
     info: null,
     link: null,
     github: null,
@@ -72,17 +75,23 @@ const ProjectDetail = (props) => {
 
   return (
     <section className={classes.ProjectDetail}>
-      <div className={[classes.Size, "container"].join(' ')}>
-        <div className="section-title">{title}</div>
+      <div className={classes.Size}>
         {imageBlock}
-        <div className={classes.ProjectStack}>
-          <strong>Tech stack</strong> | {stack}
-        </div>
-        {info}
+        <div className="container">
+          <div className={classes.InfoBlock}>
+            <div className={classes.InfoLeft}>
+              <div className={classes.ProjectTitle}>{shorthand || title}</div>
+              <div className={classes.ProjectStack}>
+                <strong>Tech stack</strong> | {stack}
+              </div>
+            </div>
+            {info}
+          </div>
         <div className={classes.BtnContainer}>
           { link ? <a href={link} target="_blank"><Button>Visit</Button></a> : null }
           { github ? <a href={github} target="_blank"><Button>Github Repo</Button></a> : null }
           <Button clicked={() => props.shift(reset)}>Back to projects</Button>
+        </div>
         </div>
       </div>
     </section>

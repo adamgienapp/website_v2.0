@@ -13,6 +13,14 @@
 }
 
 .DetailList {
-  max-width: 666px;
-  margin: 0 auto;
+  margin: 30px auto;
+  width: 60%;
+}
+
+@media (max-width: 992px) {
+  .DetailList {
+    width: auto;
+    max-width: 666px;
+    padding-inline-start: 20px;
+  }
 }

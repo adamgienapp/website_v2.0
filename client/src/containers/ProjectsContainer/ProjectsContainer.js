@@ -14,6 +14,7 @@ export default class ProjectsContainer extends Component {
       projects: [
         {
           title: 'ScratchTrack Web App',
+          shorthand: 'ScratchTrack',
           blurb: 'A web companion to the mobile app',
           youtube: 'https://www.youtube.com/embed/YSrHBuNEwEk',
           stack: 'React, SASS, Firebase',
@@ -30,13 +31,15 @@ export default class ProjectsContainer extends Component {
         },
         {
           title: 'REI Search Bar System Design',
+          shorthand: 'Search Bar System Design',
           blurb: 'Web-scaling a search bar microservice',
-          image: ['/assets/img/sdc_1.svg', '/assets/img/sdc_2.svg', '/assets/img/sdc_3.svg'],
+          image: ['/assets/img/sdc_1.png', '/assets/img/sdc_2.png', '/assets/img/sdc_3.png'],
           stack: 'React, Node, MongoDB, PostgreSQL, Nginx, AWS EC2, Loader.io',
           info: (
             <ul className={[classes.DetailList, "list-spacing"].join(' ')}>
               <li>Redesigned and scaled the back end of a pre-existing search bar microservice</li>
-              <li>Modelled application data in PostgreSQL, utilized GIN indexing to reduce query time in a data pool of 10M entries (worst-case latency reduced from 31s to 2s)</li>
+              <li>Benchmarked query performance between MongoDB and PostgreSQL, specifically targeting last 10% of entries in data pool of 10M entries</li>
+              <li>Modelled final application data in PostgreSQL, utilized GIN indexing to reduce worst-case latency from 31s to 2s</li>
               <li>Horizontally scaled to 4 EC2 micro instances behind a Nginx load balancer to increase throughput from 750 RPS to 3750 RPS with an average latency of 71ms and 0.1% error rate</li>
             </ul>
           ),
@@ -45,6 +48,7 @@ export default class ProjectsContainer extends Component {
         },
         {
           title: 'All Day I Dream About Servers',
+          shorthand: 'A.D.I.D.A.S.',
           blurb: "A mockup of adidas' product detail page",
           image: 'https://i.imgur.com/Sc7qASD.gif',
           stack: 'React, Node, MySQL, Jest + Enzyme, CircleCI',
@@ -78,7 +82,7 @@ export default class ProjectsContainer extends Component {
         {
           title: 'Portfolio v1',
           blurb: 'The initial build of my portfolio website',
-          youtube: 'https://www.youtube.com/embed/tP67UhORw7Y',
+          youtube: 'https://www.youtube.com/embed/Gp0xMzgsFIE',
           stack: 'React, Bootstrap, Nodemailer, Firebase',
           info: (
             <ul className={[classes.DetailList, "list-spacing"].join(' ')}>
