@@ -125,6 +125,6 @@
 
   .InfoLeft {
     width: 100%;
-    justify-content: center;
+    margin-right: 0;
   }
 }
