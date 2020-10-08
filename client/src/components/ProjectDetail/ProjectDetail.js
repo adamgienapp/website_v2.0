@@ -32,27 +32,31 @@ const ProjectDetail = (props) => {
     }
 
     imageBlock = (
-      <div className={classes.Slideshow}>
-        {image.map((src, idx) => (
-          <div
-            className={classes.Fade}
-            style={{ display: idx === slide ? 'block' : 'none' }}
-            key={src}>
-            <div className={classes.SlideNumber}>{idx + 1} / {image.length}</div>
-            <img className={classes.Image} src={src} alt={`${title} image #${idx + 1}`}></img>
-          </div>
-        ))}
-        <a className={classes.Prev} onClick={() => changeSlide(-1)}>
-          <i className={"fa fa-angle-left"} aria-hidden="true"></i>
-        </a>
-        <a className={classes.Next} onClick={() => changeSlide(1)}>
-          <i className={"fa fa-angle-right"} aria-hidden="true"></i>
-        </a>
+      <div className={classes.ImageContainer}>
+        <div className={classes.Slideshow}>
+          {image.map((src, idx) => (
+            <div
+              className={classes.Fade}
+              style={{ display: idx === slide ? 'block' : 'none' }}
+              key={src}>
+              <div className={classes.SlideNumber}>{idx + 1} / {image.length}</div>
+              <img className={classes.Image} src={src} alt={`${title} image #${idx + 1}`}></img>
+            </div>
+          ))}
+          <a className={classes.Prev} onClick={() => changeSlide(-1)}>
+            <i className={"fa fa-angle-left"} aria-hidden="true"></i>
+          </a>
+          <a className={classes.Next} onClick={() => changeSlide(1)}>
+            <i className={"fa fa-angle-right"} aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
     );
   } else {
     imageBlock = image ?
-      <img className={classes.Image} src={image} alt={`${title} image`}></img>
+      <div className={classes.ImageContainer}>
+        <img className={classes.Image} src={image} alt={`${title} image`}></img>
+      </div>
       :
       null;
   }

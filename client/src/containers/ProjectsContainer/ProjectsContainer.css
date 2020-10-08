@@ -19,7 +19,8 @@
 
 @media (max-width: 992px) {
   .DetailList {
-    width: 100%;
+    width: auto;
     max-width: 666px;
+    padding-inline-start: 20px;
   }
 }

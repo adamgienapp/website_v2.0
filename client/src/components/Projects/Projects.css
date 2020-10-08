@@ -7,7 +7,6 @@
   min-height: calc(100vh - 50px);
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
 }
 
 .ProjectsHide {

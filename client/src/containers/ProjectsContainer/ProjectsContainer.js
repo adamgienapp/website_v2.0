@@ -33,7 +33,7 @@ export default class ProjectsContainer extends Component {
           title: 'REI Search Bar System Design',
           shorthand: 'Search Bar System Design',
           blurb: 'Web-scaling a search bar microservice',
-          image: ['/assets/img/sdc_1.svg', '/assets/img/sdc_2.svg', '/assets/img/sdc_3.svg'],
+          image: ['/assets/img/sdc_1.png', '/assets/img/sdc_2.png', '/assets/img/sdc_3.png'],
           stack: 'React, Node, MongoDB, PostgreSQL, Nginx, AWS EC2, Loader.io',
           info: (
             <ul className={[classes.DetailList, "list-spacing"].join(' ')}>

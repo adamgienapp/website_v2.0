@@ -9,13 +9,21 @@
   justify-content: space-between;
 }
 
+.ImageContainer {
+  display: flex;
+  justify-content: center;
+  background-color: #212529;
+}
+
 .Image {
-  width: 100%;
+  display: block;
+  max-height: 60vh;
+  max-width: 100%;
 }
 
 .VideoContainer {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 60vh;
 }
 
 .Video {
@@ -28,7 +36,6 @@
 
 .Slideshow {
   position: relative;
-  width: 100%;
 }
 
 .Prev, .Next {
@@ -115,7 +122,7 @@
   display: flex;
   flex-flow: row;
   justify-content: space-around;
-  margin: 30px 0;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 992px) {
