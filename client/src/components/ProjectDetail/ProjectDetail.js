@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import classes from './ProjectDetail.css';
 import Button from '../../UI/Button/Button';
 
+
 const ProjectDetail = (props) => {
   const { title, shorthand, image, youtube, stack, info, link, github } = props.data;
 
