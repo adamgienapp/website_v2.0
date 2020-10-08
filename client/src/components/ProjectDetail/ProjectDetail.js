@@ -4,7 +4,7 @@ import classes from './ProjectDetail.css';
 import Button from '../../UI/Button/Button';
 
 const ProjectDetail = (props) => {
-  const { title, image, youtube, stack, info, link, github } = props.data;
+  const { title, shorthand, image, youtube, stack, info, link, github } = props.data;
 
   let imageBlock = null;
   if (youtube) {
@@ -59,7 +59,10 @@ const ProjectDetail = (props) => {
 
   const reset = {
     title: null,
+    shorthand: null,
     image: null,
+    youtube: null,
+    stack: null,
     info: null,
     link: null,
     github: null,
@@ -70,11 +73,15 @@ const ProjectDetail = (props) => {
       <div className={classes.Size}>
         {imageBlock}
         <div className="container">
-          <div className="section-title">{title}</div>
-          <div className={classes.ProjectStack}>
-            <strong>Tech stack</strong> | {stack}
+          <div className={classes.InfoBlock}>
+            <div className={classes.InfoLeft}>
+              <div className={classes.ProjectTitle}>{shorthand || title}</div>
+              <div className={classes.ProjectStack}>
+                <strong>Tech stack</strong> | {stack}
+              </div>
+            </div>
+            {info}
           </div>
-          {info}
         <div className={classes.BtnContainer}>
           { link ? <a href={link} target="_blank"><Button>Visit</Button></a> : null }
           { github ? <a href={github} target="_blank"><Button>Github Repo</Button></a> : null }

@@ -9,10 +9,6 @@
   justify-content: space-between;
 }
 
-/* .ImgContainer {
-  margin: 0 auto;
-} */
-
 .Image {
   width: 100%;
 }
@@ -90,10 +86,28 @@
   to {opacity: 1}
 }
 
+.InfoBlock {
+  display: flex;
+  flex-direction: row;
+}
+
+.InfoLeft {
+  width: 40%;
+  margin-right: 20px;
+}
+
+.ProjectTitle {
+  margin: 25px 0;
+  font-size: 3.1em;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
 .ProjectStack {
-  width: 666px;
-  font-size: 1.2em;
-  margin: 25px auto;
+  margin-top: 25px;
+  font-size: 1.1em;
+  text-align: center;
 }
 
 .BtnContainer {
@@ -102,4 +116,15 @@
   flex-flow: row;
   justify-content: space-around;
   margin: 30px 0;
+}
+
+@media (max-width: 992px) {
+  .InfoBlock {
+    flex-direction: column;
+  }
+
+  .InfoLeft {
+    width: 100%;
+    justify-content: center;
+  }
 }
