@@ -56,7 +56,9 @@ const ProjectDetail = (props) => {
   } else {
     imageBlock = image ?
       <div className={classes.ImageContainer}>
-        <img className={classes.Image} src={image} alt={`${title} image`}></img>
+        <div className={classes.Slideshow}>
+          <img className={classes.Image} src={image} alt={`${title} image`}></img>
+        </div>
       </div>
       :
       null;
