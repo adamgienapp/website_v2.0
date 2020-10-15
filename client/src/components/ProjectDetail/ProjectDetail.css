@@ -93,6 +93,10 @@
   to {opacity: 1}
 }
 
+.InfoContainer {
+  margin: auto;
+}
+
 .InfoBlock {
   display: flex;
   flex-direction: row;

@@ -79,7 +79,7 @@ const ProjectDetail = (props) => {
     <section className={classes.ProjectDetail}>
       <div className={classes.Size}>
         {imageBlock}
-        <div className="container">
+        <div className={["container", classes.InfoContainer].join(' ')}>
           <div className={classes.InfoBlock}>
             <div className={classes.InfoLeft}>
               <div className={classes.ProjectTitle}>{shorthand || title}</div>
