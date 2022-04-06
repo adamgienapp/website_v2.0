@@ -49,12 +49,12 @@ export default class ProjectsContainer extends Component {
         {
           title: 'All Day I Dream About Servers',
           shorthand: 'A.D.I.D.A.S.',
-          blurb: "A mockup of adidas' product detail page",
+          blurb: "Designing a product detail page",
           image: 'https://i.imgur.com/Sc7qASD.gif',
           stack: 'React, Node, MySQL, Jest + Enzyme, CircleCI',
           info: (
             <ul className={[classes.DetailList, "list-spacing"].join(' ')}>
-              <li>A mockup of adidas' product detail page</li>
+              <li>A polished, comprehensive product detail page</li>
               <li>Created the 'Ratings &amp; Reviews' microservice using React, Node/Express, and MySQL</li>
               <li>Utilized service-oriented architecture, built a proxy server to merge all 4 micro services into one cohesive web app</li>
               <li>Continuous integration testing accomplished using Jest/Enzyme and CircleCI</li>

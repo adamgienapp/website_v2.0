@@ -5,7 +5,6 @@ import classes from './Resume.css';
 import Button from '../../UI/Button/Button';
 
 const Resume = (props) => {
-
   return (
     <section id="resume" className={classes.Resume}>
       <div id="resumeContent" className={[classes.Size, classes.ResumeHide, 'container', 'scroll-show'].join(' ')}>
