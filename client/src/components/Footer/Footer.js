@@ -4,7 +4,7 @@ import classes from './Footer.css';
 
 const Footer = (props) => (
   <section id="footer" className={classes.Footer}>
-    <div style={{ margin: '0 auto' }}>&#169; Adam Gienapp 2020</div>
+    <div style={{ margin: '0 auto' }}>&#169; Adam Gienapp {new Date().getFullYear()}</div>
     <p style={{ fontSize: 'small' , textAlign: 'center', lineHeight: 1.4 }}>
       Icons courtesy of:
       <br></br>
