@@ -60,7 +60,6 @@ export default class ProjectsContainer extends Component {
               <li>Continuous integration testing accomplished using Jest/Enzyme and CircleCI</li>
             </ul>
           ),
-          link: "http://3.101.29.112/1/",
           github: "https://github.com/All-Day-I-Dream-About-Servers/review-service",
         },
         {
@@ -76,7 +75,6 @@ export default class ProjectsContainer extends Component {
               <li>Email forwarding accomplished using Nodemailer and Firebase Cloud Functions</li>
             </ul>
           ),
-          link: null,
           github: "https://github.com/adamgienapp/website_v2.0",
         },
         {
