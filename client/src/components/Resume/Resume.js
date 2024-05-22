@@ -14,7 +14,7 @@ const Resume = (props) => {
           <ul>
             <li className={classes.ListItem}>A seasoned engineer with a proven track record of developing innovative, impactful products from concept through production.</li>
             <li className={classes.ListItem}>Experience at start-ups, global corporations, and everything in between.</li>
-            <li className={classes.ListItem}>Current role: Software Engineer @ Rocket Mortgage</li>
+            <li className={classes.ListItem}>Current role: Software Engineer II @ ICE: Mortgage Technology</li>
           </ul>
         </div>
         <div style={{ textAlign: 'center', margin: '25px 0 40px 0' }}>
